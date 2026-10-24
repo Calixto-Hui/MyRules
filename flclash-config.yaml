@@ -139,62 +139,62 @@ proxy-groups:
     <<: *auto
     filter: "德国|法兰克福|DE|Germany|🇩🇪"
 
-# ---------- 规则集（来自 github.com/Calixto-Hui/ClashRules）----------
+# ---------- 规则集（来自 github.com/Calixto-Hui/MyRules）----------
 rule-providers:
   muse:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/muse.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/muse.yaml"
     path: ./ruleset/muse.yaml
     interval: 86400
   paypal:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/paypal.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/paypal.yaml"
     path: ./ruleset/paypal.yaml
     interval: 86400
   wise:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/wise.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/wise.yaml"
     path: ./ruleset/wise.yaml
     interval: 86400
   blued:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/blued.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/blued.yaml"
     path: ./ruleset/blued.yaml
     interval: 86400
   lgbt:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/lgbt.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/lgbt.yaml"
     path: ./ruleset/lgbt.yaml
     interval: 86400
   streaming:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/streaming.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/streaming.yaml"
     path: ./ruleset/streaming.yaml
     interval: 86400
   google:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/google.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/google.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
   apple:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/apple.yaml"
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/apple.yaml"
     path: ./ruleset/apple.yaml
     interval: 86400
 

@@ -1,4 +1,4 @@
-# ClashRules
+# MyRules
 
 自用的 Clash 规则。mihomo 规则集，适用于 FlClash、Clash Verge Rev、Stash 等客户端。
 
@@ -25,7 +25,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/muse.yaml
+    url: https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/muse.yaml
     path: ./ruleset/muse.yaml
     interval: 86400
 
