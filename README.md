@@ -25,7 +25,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/kekeke-wang/ClashRules/main/muse.yaml
+    url: https://raw.githubusercontent.com/Calixto-Hui/ClashRules/main/muse.yaml
     path: ./ruleset/muse.yaml
     interval: 86400
 
