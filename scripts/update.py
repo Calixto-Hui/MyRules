@@ -22,17 +22,19 @@ RULES = {
     "paypal": ("PayPal（含 Braintree、Venmo 等）", [f"{BM}/PayPal/PayPal.yaml"]),
     "blued": ("Blued", [f"{BM}/Blued/Blued.yaml"]),
     "lgbt": ("LGBT 社交应用（Grindr / Hornet / Jack'd / Scruff / Romeo / Taimi / HER）", []),
-    "streaming": ("流媒体（Netflix / YouTube / Disney+ / HBO / Prime Video / Spotify / TikTok）", [
+    "streaming": ("流媒体（Netflix / Disney+ / HBO / Prime Video / Spotify）", [
         f"{BM}/Netflix/Netflix_Classical.yaml",
-        f"{BM}/YouTube/YouTube.yaml",
         f"{BM}/Disney/Disney.yaml",
         f"{BM}/HBO/HBO.yaml",
         f"{BM}/PrimeVideo/PrimeVideo.yaml",
         f"{BM}/Spotify/Spotify.yaml",
-        f"{BM}/TikTok/TikTok.yaml",
     ]),
+    "tiktok": ("TikTok", [f"{BM}/TikTok/TikTok.yaml"]),
     "apple": ("Apple", [f"{BM}/Apple/Apple_Classical.yaml"]),
-    "google": ("Google", [f"{BM}/Google/Google.yaml"]),
+    "google": ("Google（含 YouTube）", [
+        f"{BM}/Google/Google.yaml",
+        f"{BM}/YouTube/YouTube.yaml",
+    ]),
 }
 
 RULE_TYPES = ("DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "DOMAIN-REGEX", "IP-CIDR",

@@ -101,6 +101,10 @@ proxy-groups:
     type: select
     proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 英国节点, 全部节点]
 
+  - name: TikTok
+    type: select
+    proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 台湾节点, 英国节点, 全部节点, DIRECT]
+
   - name: 谷歌服务
     type: select
     proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 全部节点, DIRECT]
@@ -183,6 +187,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/streaming.yaml"
     path: ./ruleset/streaming.yaml
     interval: 86400
+  tiktok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/tiktok.yaml"
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
   google:
     type: http
     behavior: classical
@@ -207,8 +218,9 @@ rules:
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued
   - RULE-SET,lgbt,LGBT应用
+  - RULE-SET,tiktok,TikTok
   - RULE-SET,streaming,流媒体
-  - RULE-SET,google,谷歌服务
+  - RULE-SET,google,谷歌服务  # 含 YouTube
   - RULE-SET,apple,苹果服务
   - GEOIP,SA,DIRECT
   - MATCH,漏网之鱼

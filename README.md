@@ -11,9 +11,10 @@
 | paypal.yaml | PayPal（含 Braintree、Venmo 等） | 247 | blackmatrix7/ios_rule_script |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
 | lgbt.yaml | Grindr、Hornet、Jack'd、Scruff、Romeo、Taimi、HER | 12 | 自行整理 |
-| streaming.yaml | Netflix、YouTube、Disney+、HBO、Prime Video、Spotify、TikTok | 1642 | blackmatrix7/ios_rule_script |
+| streaming.yaml | Netflix、Disney+、HBO、Prime Video、Spotify | 1424 | blackmatrix7/ios_rule_script |
+| tiktok.yaml | TikTok | 35 | blackmatrix7/ios_rule_script |
 | apple.yaml | Apple | 1593 | blackmatrix7/ios_rule_script |
-| google.yaml | Google | 701 | blackmatrix7/ios_rule_script |
+| google.yaml | Google（含 YouTube） | 881 | blackmatrix7/ios_rule_script |
 
 所有文件都是 classical 格式（`behavior: classical`、`format: yaml`）。
 
@@ -37,9 +38,9 @@ rules:
 
 ## 建议的规则顺序
 
-muse → paypal → wise → blued → lgbt → streaming → google → apple
+muse → paypal → wise → blued → lgbt → tiktok → streaming → google → apple
 
-streaming 要放在 google 前面，避免 YouTube 被谷歌规则先匹配。
+YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 
 ## 自动更新
 
