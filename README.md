@@ -12,6 +12,10 @@
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
 | lgbt.yaml | Grindr、Hornet、Jack'd、Scruff、Romeo、Taimi、HER | 12 | 自行整理 |
 | streaming.yaml | Netflix、Disney+、HBO、Prime Video、Spotify | 1424 | blackmatrix7/ios_rule_script |
+| douyin.yaml | 抖音（含火山版、汽水音乐、西瓜视频、今日头条） | 78 | blackmatrix7/ios_rule_script、v2fly |
+| xiaohongshu.yaml | 小红书（含 RedNote） | 11 | blackmatrix7/ios_rule_script、v2fly |
+| wechat.yaml | 微信 | 31 | blackmatrix7/ios_rule_script |
+| line.yaml | LINE | 37 | blackmatrix7/ios_rule_script、v2fly |
 | tiktok.yaml | TikTok | 35 | blackmatrix7/ios_rule_script |
 | apple.yaml | Apple | 1593 | blackmatrix7/ios_rule_script |
 | google.yaml | Google（含 YouTube） | 881 | blackmatrix7/ios_rule_script |
@@ -38,7 +42,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → paypal → wise → blued → lgbt → tiktok → streaming → google → apple
+muse → paypal → wise → blued → lgbt → wechat → xiaohongshu → douyin → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

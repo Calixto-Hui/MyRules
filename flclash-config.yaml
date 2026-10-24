@@ -1,6 +1,6 @@
 # ================================================
 # FlClash / mihomo 配置文件
-# 使用前只需改一处：proxy-providers 里的 url 换成你的机场订阅链接
+# 使用前只需改一处：proxy-providers 里填上各个机场的订阅链接（支持多个）
 # ================================================
 
 mixed-port: 7890
@@ -43,12 +43,40 @@ dns:
     - https://dns.google/dns-query
 
 # ---------- 机场订阅（★ 改这里）----------
+# 有几个机场就留几个，把 url 换成各自的订阅链接；用不到的整段删掉
+# additional-prefix 会在节点名前加上机场名，方便在「全部节点」里区分
 proxy-providers:
-  机场:
+  机场1:
     type: http
-    url: "这里粘贴你的订阅链接"
-    path: ./providers/airport.yaml
+    url: "这里粘贴机场1的订阅链接"
+    path: ./providers/airport1.yaml
     interval: 86400
+    override:
+      additional-prefix: "[机场1] "
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+
+  机场2:
+    type: http
+    url: "这里粘贴机场2的订阅链接"
+    path: ./providers/airport2.yaml
+    interval: 86400
+    override:
+      additional-prefix: "[机场2] "
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+
+  机场3:
+    type: http
+    url: "这里粘贴机场3的订阅链接"
+    path: ./providers/airport3.yaml
+    interval: 86400
+    override:
+      additional-prefix: "[机场3] "
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -57,7 +85,7 @@ proxy-providers:
 # ---------- 公共模板 ----------
 auto-test: &auto
   type: url-test
-  use: [机场]
+  use: [机场1, 机场2, 机场3]  # 删掉机场时这里也要同步删
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -67,55 +95,82 @@ proxy-groups:
   # 总开关
   - name: 节点选择
     type: select
-    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, 机场1, 机场2, 机场3, DIRECT]
 
   - name: 自动选择
     <<: *auto
 
   - name: 全部节点
     type: select
-    use: [机场]
+    use: [机场1, 机场2, 机场3]  # 删掉机场时这里也要同步删
 
-  # 各服务分流（每个都可以在 FlClash 里单独切节点）
+  # 按机场分组（只看某一个机场的节点）
+  - name: 机场1
+    type: select
+    use: [机场1]
+  - name: 机场2
+    type: select
+    use: [机场2]
+  - name: 机场3
+    type: select
+    use: [机场3]
+
+  # 各服务分流（每个都可以在 FlClash 里单独切节点，所有分组都能选直连）
   - name: Muse
     type: select
-    proxies: [美国节点, 节点选择, 日本节点, 新加坡节点, 英国节点, 全部节点]
+    proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   - name: 流媒体
     type: select
-    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 英国节点, 全部节点]
-
-  - name: PayPal
-    type: select
-    proxies: [美国节点, 节点选择, 香港节点, 英国节点, 全部节点, DIRECT]
-
-  - name: Wise
-    type: select
-    proxies: [节点选择, 美国节点, 英国节点, 香港节点, 新加坡节点, 全部节点, DIRECT]
-
-  - name: Blued
-    type: select
-    proxies: [香港节点, 中国大陆节点, 节点选择, 台湾节点, 日本节点, 新加坡节点, 全部节点, DIRECT]
-
-  - name: LGBT应用
-    type: select
-    proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 英国节点, 全部节点]
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   - name: TikTok
     type: select
-    proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 台湾节点, 英国节点, 全部节点, DIRECT]
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: PayPal
+    type: select
+    proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: Wise
+    type: select
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: Blued
+    type: select
+    proxies: [香港节点, 节点选择, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: LGBT应用
+    type: select
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: LINE
+    type: select
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
+  - name: 微信
+    type: select
+    proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
+
+  - name: 小红书
+    type: select
+    proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
+
+  - name: 抖音
+    type: select
+    proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
 
   - name: 谷歌服务
     type: select
-    proxies: [节点选择, 美国节点, 日本节点, 新加坡节点, 香港节点, 全部节点, DIRECT]
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   - name: 苹果服务
     type: select
-    proxies: [DIRECT, 节点选择, 美国节点, 香港节点, 全部节点]
+    proxies: [DIRECT, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点]
 
   - name: 漏网之鱼
     type: select
-    proxies: [节点选择, DIRECT]
+    proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   # 国家/地区（按节点名自动归类，测速选最快）
   - name: 香港节点
@@ -191,6 +246,34 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/streaming.yaml"
     path: ./ruleset/streaming.yaml
     interval: 86400
+  douyin:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/douyin.yaml"
+    path: ./ruleset/douyin.yaml
+    interval: 86400
+  xiaohongshu:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/xiaohongshu.yaml"
+    path: ./ruleset/xiaohongshu.yaml
+    interval: 86400
+  wechat:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/wechat.yaml"
+    path: ./ruleset/wechat.yaml
+    interval: 86400
+  line:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/line.yaml"
+    path: ./ruleset/line.yaml
+    interval: 86400
   tiktok:
     type: http
     behavior: classical
@@ -222,6 +305,10 @@ rules:
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued
   - RULE-SET,lgbt,LGBT应用
+  - RULE-SET,wechat,微信
+  - RULE-SET,xiaohongshu,小红书
+  - RULE-SET,douyin,抖音
+  - RULE-SET,line,LINE
   - RULE-SET,tiktok,TikTok
   - RULE-SET,streaming,流媒体
   - RULE-SET,google,谷歌服务  # 含 YouTube

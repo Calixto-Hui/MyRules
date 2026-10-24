@@ -30,6 +30,19 @@ RULES = {
         f"{BM}/Spotify/Spotify.yaml",
     ]),
     "tiktok": ("TikTok", [f"{BM}/TikTok/TikTok.yaml"]),
+    "douyin": ("抖音（含抖音火山版、汽水音乐、西瓜视频、今日头条）", [
+        f"{BM}/DouYin/DouYin.yaml",
+        f"{V2FLY}/douyin",
+    ]),
+    "xiaohongshu": ("小红书（含 RedNote）", [
+        f"{BM}/XiaoHongShu/XiaoHongShu.yaml",
+        f"{V2FLY}/xiaohongshu",
+    ]),
+    "wechat": ("微信", [f"{BM}/WeChat/WeChat.yaml"]),
+    "line": ("LINE", [
+        f"{BM}/Line/Line.yaml",
+        f"{V2FLY}/line",
+    ]),
     "apple": ("Apple", [f"{BM}/Apple/Apple_Classical.yaml"]),
     "google": ("Google（含 YouTube）", [
         f"{BM}/Google/Google.yaml",
