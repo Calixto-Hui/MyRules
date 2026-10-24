@@ -67,7 +67,7 @@ proxy-groups:
   # 总开关
   - name: 节点选择
     type: select
-    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点, DIRECT]
+    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   - name: 自动选择
     <<: *auto
@@ -95,7 +95,7 @@ proxy-groups:
 
   - name: Blued
     type: select
-    proxies: [香港节点, 节点选择, 台湾节点, 日本节点, 新加坡节点, 全部节点, DIRECT]
+    proxies: [香港节点, 中国大陆节点, 节点选择, 台湾节点, 日本节点, 新加坡节点, 全部节点, DIRECT]
 
   - name: LGBT应用
     type: select
@@ -142,6 +142,10 @@ proxy-groups:
   - name: 德国节点
     <<: *auto
     filter: "德国|法兰克福|DE|Germany|🇩🇪"
+  - name: 中国大陆节点
+    <<: *auto
+    filter: "中国|大陆|回国|国内|北京|上海|广州|深圳|杭州|成都|CN|China|🇨🇳"
+    exclude-filter: "港|台|澳|HK|TW|MO|Hong Kong|Taiwan|Macao|Macau"
 
 # ---------- 规则集（来自 github.com/Calixto-Hui/MyRules）----------
 rule-providers:
