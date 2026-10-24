@@ -1,0 +1,2 @@
+# paypal 补充域名（上游没有、你想自己加的写在这里）
+# 每行一条，例如：DOMAIN-SUFFIX,example.com

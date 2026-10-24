@@ -1,4 +1,19 @@
+# NAME: Muse (Meta AI)
+# SOURCE: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/meta-ai.yaml
+# CUSTOM: custom/muse.txt
+# TOTAL: 29
 payload:
+  - DOMAIN,ai.developer.meta.com
+  - DOMAIN,ai.meta.com
+  - DOMAIN,aidemos.meta.com
+  - DOMAIN,developer.meta.com
+  - DOMAIN,llama.developer.meta.com
+  - DOMAIN-SUFFIX,atmeta.com
+  - DOMAIN-SUFFIX,llama.com
+  - DOMAIN-SUFFIX,llamameta.net
+  - DOMAIN-SUFFIX,meta.ai
+  - DOMAIN-SUFFIX,metaaivm.com
+  - DOMAIN-SUFFIX,muse.ai
   - DOMAIN-SUFFIX,museai.com
   - DOMAIN-SUFFIX,meta.com
   - DOMAIN-SUFFIX,metaaiusercontent.com
@@ -13,6 +28,7 @@ payload:
   - DOMAIN-SUFFIX,facebook.net
   - DOMAIN-SUFFIX,fbcdn.net
   - DOMAIN-SUFFIX,fbsbx.com
+  - DOMAIN-SUFFIX,fbpigeon.com
   - DOMAIN-SUFFIX,fb.com
   - DOMAIN-SUFFIX,instagram.com
   - DOMAIN-SUFFIX,cdninstagram.com

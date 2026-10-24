@@ -1,0 +1,19 @@
+# LGBT 社交应用（GitHub 上没有现成规则集，手动维护）
+# Grindr
+DOMAIN-SUFFIX,grindr.com
+DOMAIN-SUFFIX,grindr.mobi
+DOMAIN-SUFFIX,grindr.me
+# Hornet
+DOMAIN-SUFFIX,hornet.com
+DOMAIN-SUFFIX,hornetapp.com
+# Jack'd / SCRUFF（同属 Perry Street）
+DOMAIN-SUFFIX,jackd.com
+DOMAIN-SUFFIX,scruff.com
+DOMAIN-SUFFIX,perrystreet.com
+# Romeo
+DOMAIN-SUFFIX,romeo.com
+DOMAIN-SUFFIX,planetromeo.com
+# Taimi
+DOMAIN-SUFFIX,taimi.com
+# HER
+DOMAIN-SUFFIX,weareher.com

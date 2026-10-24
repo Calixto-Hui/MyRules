@@ -1,0 +1,16 @@
+# NAME: LGBT 社交应用（Grindr / Hornet / Jack'd / Scruff / Romeo / Taimi / HER）
+# CUSTOM: custom/lgbt.txt
+# TOTAL: 12
+payload:
+  - DOMAIN-SUFFIX,grindr.com
+  - DOMAIN-SUFFIX,grindr.mobi
+  - DOMAIN-SUFFIX,grindr.me
+  - DOMAIN-SUFFIX,hornet.com
+  - DOMAIN-SUFFIX,hornetapp.com
+  - DOMAIN-SUFFIX,jackd.com
+  - DOMAIN-SUFFIX,scruff.com
+  - DOMAIN-SUFFIX,perrystreet.com
+  - DOMAIN-SUFFIX,romeo.com
+  - DOMAIN-SUFFIX,planetromeo.com
+  - DOMAIN-SUFFIX,taimi.com
+  - DOMAIN-SUFFIX,weareher.com

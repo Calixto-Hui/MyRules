@@ -1,0 +1,7 @@
+# NAME: Wise 国际汇款（原 TransferWise）
+# SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/wise
+# CUSTOM: custom/wise.txt
+# TOTAL: 2
+payload:
+  - DOMAIN-SUFFIX,transferwise.com
+  - DOMAIN-SUFFIX,wise.com
