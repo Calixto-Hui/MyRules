@@ -17,11 +17,6 @@
 
 所有文件都是 classical 格式（`behavior: classical`、`format: yaml`）。
 
-## 其他文件（手动维护，不参与自动更新）
-
-- ClashRules.ini：订阅转换（subconverter）用的配置，基于 ACL4SSR 修改
-- PayPal.list、Emby.list：ClashRules.ini 引用的规则
-
 ## 使用方法
 
 ```yaml
