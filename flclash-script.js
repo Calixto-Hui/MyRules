@@ -8,8 +8,8 @@
 
 function main(config) {
   const subs = {
-    "机场1": "这里粘贴机场1的订阅链接",
-    "机场2": "这里粘贴机场2的订阅链接",
+    "TAG-GLOBAL": "这里粘贴TAG-GLOBAL的订阅链接",
+    "EdNovas": "这里粘贴EdNovas的订阅链接",
   };
 
   const providers = config["proxy-providers"] || {};

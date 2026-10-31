@@ -47,7 +47,7 @@ rules:
    `https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/flclash-config.yaml`，
    自动更新间隔设成 1 天（或更短）。以后仓库里的配置一改，FlClash 自动同步。
 2. **新建覆写脚本**：「配置」右上角「脚本」→ 新建，把 flclash-script.js 的内容粘贴进去，
-   在里面填上两个机场的订阅链接，保存。
+   在里面填上两个机场（TAG-GLOBAL、EdNovas）的订阅链接，保存。
 3. **绑定脚本**：在第 1 步导入的配置上，打开「覆写」，选脚本模式，选中第 2 步的脚本。
 
 订阅链接只保存在 FlClash 本地，不会出现在 GitHub 上。需要 FlClash 0.8.85 或更新版本。

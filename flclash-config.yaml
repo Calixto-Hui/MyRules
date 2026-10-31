@@ -49,25 +49,25 @@ dns:
 # 有几个机场就留几个，把 url 换成各自的订阅链接；用不到的整段删掉
 # additional-prefix 会在节点名前加上机场名，方便在「全部节点」里区分
 proxy-providers:
-  机场1:
+  TAG-GLOBAL:
     type: http
-    url: "这里粘贴机场1的订阅链接"
-    path: ./providers/airport1.yaml
+    url: "这里粘贴TAG-GLOBAL的订阅链接"
+    path: ./providers/tag-global.yaml
     interval: 86400
     override:
-      additional-prefix: "[机场1] "
+      additional-prefix: "[TAG-GLOBAL] "
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
 
-  机场2:
+  EdNovas:
     type: http
-    url: "这里粘贴机场2的订阅链接"
-    path: ./providers/airport2.yaml
+    url: "这里粘贴EdNovas的订阅链接"
+    path: ./providers/ednovas.yaml
     interval: 86400
     override:
-      additional-prefix: "[机场2] "
+      additional-prefix: "[EdNovas] "
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -77,7 +77,7 @@ proxy-providers:
 # ---------- 公共模板 ----------
 auto-test: &auto
   type: url-test
-  use: [机场1, 机场2]  # 删掉机场时这里也要同步删
+  use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -87,22 +87,22 @@ proxy-groups:
   # 总开关
   - name: 节点选择
     type: select
-    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, 机场1, 机场2, DIRECT]
+    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, TAG-GLOBAL, EdNovas, DIRECT]
 
   - name: 自动选择
     <<: *auto
 
   - name: 全部节点
     type: select
-    use: [机场1, 机场2]  # 删掉机场时这里也要同步删
+    use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
 
   # 按机场分组（只看某一个机场的节点）
-  - name: 机场1
+  - name: TAG-GLOBAL
     type: select
-    use: [机场1]
-  - name: 机场2
+    use: [TAG-GLOBAL]
+  - name: EdNovas
     type: select
-    use: [机场2]
+    use: [EdNovas]
 
   # 各服务分流（每个都可以在 FlClash 里单独切节点，所有分组都能选直连）
   - name: Muse
@@ -183,7 +183,7 @@ proxy-groups:
     filter: "韩|首尔|KR|Korea|🇰🇷"
   - name: 美国节点   # 手动选择，不自动测速
     type: select
-    use: [机场1, 机场2]  # 删掉机场时这里也要同步删
+    use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
     filter: "美国|洛杉矶|圣何塞|西雅图|纽约|US|USA|United States|🇺🇸"
   - name: 英国节点
     <<: *auto
