@@ -7,7 +7,7 @@
 | 文件 | 内容 | 条数 | 来源 |
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
-| manus.yaml | Manus AI 智能体（含 manus.space 部署站点） | 4 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
+| manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
 | paypal.yaml | PayPal（含 Braintree、Venmo 等） | 247 | blackmatrix7/ios_rule_script |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |

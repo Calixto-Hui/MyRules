@@ -2,3 +2,7 @@
 # 每行一条，格式：类型,域名
 DOMAIN-SUFFIX,manus.space
 DOMAIN-SUFFIX,manusvm.computer
+# Manus App 里的所有流量（安卓包名），不管访问什么域名都走 Manus 分组
+PROCESS-NAME,ai.manus.agents
+# FingerprintJS 设备指纹，Manus 登录风控会用；要跟 Manus 走同一个 IP
+DOMAIN-SUFFIX,fpjs.io
