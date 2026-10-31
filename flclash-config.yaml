@@ -35,6 +35,7 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.ntp.org"
+    - "+.3gppnetwork.org"   # Wi-Fi 通话（运营商 ePDG 服务器）要拿真实 IP
   default-nameserver:
     - 1.1.1.1
     - 8.8.8.8
@@ -312,6 +313,10 @@ rule-providers:
 rules:
   - GEOSITE,private,DIRECT
   - GEOIP,private,DIRECT,no-resolve
+  # Wi-Fi 通话（Tello / T-Mobile 等）：IPsec 隧道直连，否则会报 ER081
+  - DOMAIN-SUFFIX,3gppnetwork.org,DIRECT
+  - AND,((NETWORK,UDP),(DST-PORT,500)),DIRECT
+  - AND,((NETWORK,UDP),(DST-PORT,4500)),DIRECT
   - RULE-SET,muse,Muse
   - RULE-SET,manus,Manus
   - RULE-SET,paypal,PayPal
