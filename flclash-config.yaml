@@ -120,6 +120,10 @@ proxy-groups:
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
+  - name: Manus
+    type: select
+    proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
   - name: 流媒体
     type: select
     proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
@@ -211,6 +215,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/muse.yaml"
     path: ./ruleset/muse.yaml
     interval: 86400
+  manus:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/manus.yaml"
+    path: ./ruleset/manus.yaml
+    interval: 86400
   paypal:
     type: http
     behavior: classical
@@ -301,6 +312,7 @@ rules:
   - GEOSITE,private,DIRECT
   - GEOIP,private,DIRECT,no-resolve
   - RULE-SET,muse,Muse
+  - RULE-SET,manus,Manus
   - RULE-SET,paypal,PayPal
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued

@@ -1,0 +1,10 @@
+# NAME: Manus AI 智能体
+# SOURCE: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/manus.yaml
+# SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/manus
+# CUSTOM: custom/manus.txt
+# TOTAL: 4
+payload:
+  - DOMAIN-SUFFIX,manus.im
+  - DOMAIN-SUFFIX,manuscdn.com
+  - DOMAIN-SUFFIX,manus.space
+  - DOMAIN-SUFFIX,manusvm.computer

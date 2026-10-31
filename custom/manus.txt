@@ -1,0 +1,4 @@
+# Manus 补充域名（上游 VPSDance、v2fly 没收录的）
+# 每行一条，格式：类型,域名
+DOMAIN-SUFFIX,manus.space
+DOMAIN-SUFFIX,manusvm.computer

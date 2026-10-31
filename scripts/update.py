@@ -18,6 +18,10 @@ VPSDANCE = "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules
 # 输出文件 -> (标题, 上游列表)。上游为空表示只用 custom/ 里手动维护的内容。
 RULES = {
     "muse": ("Muse (Meta AI)", [f"{VPSDANCE}/meta-ai.yaml"]),
+    "manus": ("Manus AI 智能体", [
+        f"{VPSDANCE}/manus.yaml",
+        f"{V2FLY}/manus",
+    ]),
     "wise": ("Wise 国际汇款（原 TransferWise）", [f"{V2FLY}/wise"]),
     "paypal": ("PayPal（含 Braintree、Venmo 等）", [f"{BM}/PayPal/PayPal.yaml"]),
     "blued": ("Blued", [f"{BM}/Blued/Blued.yaml"]),
