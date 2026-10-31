@@ -1,6 +1,8 @@
 # ================================================
 # FlClash / mihomo 配置文件
-# 使用前只需改一处：proxy-providers 里填上各个机场的订阅链接（支持多个）
+# 推荐用法：在 FlClash 里用 URL 导入本文件（自动更新），
+# 机场订阅链接用覆写脚本 flclash-script.js 填进去，见 README「FlClash 设置」
+# 不用脚本的话：把下面 proxy-providers 里的 url 换成自己的订阅链接
 # ================================================
 
 mixed-port: 7890
@@ -43,7 +45,7 @@ dns:
     - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
 
-# ---------- 机场订阅（★ 改这里）----------
+# ---------- 机场订阅（链接由覆写脚本 flclash-script.js 填入）----------
 # 有几个机场就留几个，把 url 换成各自的订阅链接；用不到的整段删掉
 # additional-prefix 会在节点名前加上机场名，方便在「全部节点」里区分
 proxy-providers:
@@ -71,22 +73,11 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
 
-  机场3:
-    type: http
-    url: "这里粘贴机场3的订阅链接"
-    path: ./providers/airport3.yaml
-    interval: 86400
-    override:
-      additional-prefix: "[机场3] "
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
 
 # ---------- 公共模板 ----------
 auto-test: &auto
   type: url-test
-  use: [机场1, 机场2, 机场3]  # 删掉机场时这里也要同步删
+  use: [机场1, 机场2]  # 删掉机场时这里也要同步删
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -96,14 +87,14 @@ proxy-groups:
   # 总开关
   - name: 节点选择
     type: select
-    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, 机场1, 机场2, 机场3, DIRECT]
+    proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, 机场1, 机场2, DIRECT]
 
   - name: 自动选择
     <<: *auto
 
   - name: 全部节点
     type: select
-    use: [机场1, 机场2, 机场3]  # 删掉机场时这里也要同步删
+    use: [机场1, 机场2]  # 删掉机场时这里也要同步删
 
   # 按机场分组（只看某一个机场的节点）
   - name: 机场1
@@ -112,9 +103,6 @@ proxy-groups:
   - name: 机场2
     type: select
     use: [机场2]
-  - name: 机场3
-    type: select
-    use: [机场3]
 
   # 各服务分流（每个都可以在 FlClash 里单独切节点，所有分组都能选直连）
   - name: Muse
@@ -195,7 +183,7 @@ proxy-groups:
     filter: "韩|首尔|KR|Korea|🇰🇷"
   - name: 美国节点   # 手动选择，不自动测速
     type: select
-    use: [机场1, 机场2, 机场3]  # 删掉机场时这里也要同步删
+    use: [机场1, 机场2]  # 删掉机场时这里也要同步删
     filter: "美国|洛杉矶|圣何塞|西雅图|纽约|US|USA|United States|🇺🇸"
   - name: 英国节点
     <<: *auto
