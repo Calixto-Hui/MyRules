@@ -10,7 +10,7 @@
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
 | ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 333 | VPSDance/ai-proxy-rules |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
-| paypal.yaml | PayPal（含 Braintree、Venmo 等） | 247 | blackmatrix7/ios_rule_script |
+| finance.yaml | 美国支付与金融：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Visa、Mastercard、大通/美银/富国/花旗/运通等银行、嘉信/富达/先锋/Robinhood 等券商 | 646 | blackmatrix7、v2fly、自行整理 |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
 | lgbt.yaml | Grindr、Hornet、Jack'd、Scruff、Romeo、Taimi、HER | 12 | 自行整理 |
 | streaming.yaml | Netflix、Disney+、HBO、Prime Video、Spotify | 1424 | blackmatrix7/ios_rule_script |
@@ -56,7 +56,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → manus → ai → paypal → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → line → tiktok → streaming → google → apple
+muse → manus → ai → finance → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

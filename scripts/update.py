@@ -26,7 +26,14 @@ RULES = {
     "ai": ("AI 工具（ChatGPT / Claude / Gemini / Grok / Perplexity / Copilot 等，不含 Muse、Manus）",
            [f"{VPSDANCE}/global.yaml"]),
     "wise": ("Wise 国际汇款（原 TransferWise）", [f"{V2FLY}/wise"]),
-    "paypal": ("PayPal（含 Braintree、Venmo 等）", [f"{BM}/PayPal/PayPal.yaml"]),
+    "finance": ("美国支付与金融（PayPal / Venmo / Stripe / Cash App / Visa / Mastercard / 美国银行与券商）", [
+        f"{BM}/PayPal/PayPal.yaml",
+        f"{V2FLY}/stripe",
+        f"{V2FLY}/squareup",
+        f"{V2FLY}/visa",
+        f"{V2FLY}/mastercard",
+        f"{V2FLY}/schwab",
+    ]),
     "blued": ("Blued", [f"{BM}/Blued/Blued.yaml"]),
     "lgbt": ("LGBT 社交应用（Grindr / Hornet / Jack'd / Scruff / Romeo / Taimi / HER）", []),
     "streaming": ("流媒体（Netflix / Disney+ / HBO / Prime Video / Spotify）", [

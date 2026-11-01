@@ -1,0 +1,34 @@
+# 美国支付与金融补充域名（上游没收录的）
+# 每行一条，格式：类型,域名
+
+# 支付 / 转账
+DOMAIN-SUFFIX,zellepay.com
+DOMAIN-SUFFIX,plaid.com
+DOMAIN-SUFFIX,affirm.com
+
+# 银行
+DOMAIN-SUFFIX,chase.com
+DOMAIN-SUFFIX,jpmorgan.com
+DOMAIN-SUFFIX,jpmorganchase.com
+DOMAIN-SUFFIX,bankofamerica.com
+DOMAIN-SUFFIX,bofa.com
+DOMAIN-SUFFIX,wellsfargo.com
+DOMAIN-SUFFIX,citi.com
+DOMAIN-SUFFIX,citibank.com
+DOMAIN-SUFFIX,citicards.com
+DOMAIN-SUFFIX,capitalone.com
+DOMAIN-SUFFIX,usbank.com
+DOMAIN-SUFFIX,americanexpress.com
+DOMAIN-SUFFIX,aexp.com
+DOMAIN-SUFFIX,aexp-static.com
+DOMAIN-SUFFIX,discover.com
+DOMAIN-SUFFIX,ally.com
+DOMAIN-SUFFIX,marcus.com
+DOMAIN-SUFFIX,sofi.com
+DOMAIN-SUFFIX,chime.com
+
+# 券商（美国本土账户）
+DOMAIN-SUFFIX,fidelity.com
+DOMAIN-SUFFIX,vanguard.com
+DOMAIN-SUFFIX,robinhood.com
+DOMAIN-SUFFIX,merrilledge.com

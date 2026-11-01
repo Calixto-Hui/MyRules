@@ -125,7 +125,7 @@ proxy-groups:
     type: select
     proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
-  - name: PayPal
+  - name: 美国金融   # PayPal、美国银行、支付；建议固定一个美国节点不要常换
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
@@ -227,12 +227,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/ai.yaml"
     path: ./ruleset/ai.yaml
     interval: 86400
-  paypal:
+  finance:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/paypal.yaml"
-    path: ./ruleset/paypal.yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/finance.yaml"
+    path: ./ruleset/finance.yaml
     interval: 86400
   wise:
     type: http
@@ -330,7 +330,7 @@ rules:
   - RULE-SET,muse,Muse
   - RULE-SET,manus,Manus
   - RULE-SET,ai,AI工具  # ChatGPT、Claude、Gemini 等，排在 google 前面
-  - RULE-SET,paypal,PayPal
+  - RULE-SET,finance,美国金融
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued
   - RULE-SET,lgbt,LGBT应用
