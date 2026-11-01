@@ -45,6 +45,8 @@ RULES = {
         f"{BM}/XiaoHongShu/XiaoHongShu.yaml",
         f"{V2FLY}/xiaohongshu",
     ]),
+    "chinamedia": ("国内流媒体（爱奇艺 / 优酷 / 腾讯视频 / 芒果TV / B站 / 央视 / QQ音乐 / 网易云音乐等）",
+                   [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
     "wechat": ("微信", [f"{BM}/WeChat/WeChat.yaml"]),
     "line": ("LINE", [
         f"{BM}/Line/Line.yaml",

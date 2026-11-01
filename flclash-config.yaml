@@ -157,6 +157,10 @@ proxy-groups:
     type: select
     proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
 
+  - name: 国内流媒体   # 爱优腾芒、B站等有版权地区限制，默认走中国大陆节点
+    type: select
+    proxies: [中国大陆节点, DIRECT, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
+
   - name: 谷歌服务
     type: select
     proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
@@ -265,6 +269,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/douyin.yaml"
     path: ./ruleset/douyin.yaml
     interval: 86400
+  chinamedia:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/chinamedia.yaml"
+    path: ./ruleset/chinamedia.yaml
+    interval: 86400
   xiaohongshu:
     type: http
     behavior: classical
@@ -326,6 +337,7 @@ rules:
   - RULE-SET,wechat,微信
   - RULE-SET,xiaohongshu,小红书
   - RULE-SET,douyin,抖音
+  - RULE-SET,chinamedia,国内流媒体
   - RULE-SET,line,LINE
   - RULE-SET,tiktok,TikTok
   - RULE-SET,streaming,流媒体
