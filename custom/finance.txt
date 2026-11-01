@@ -27,8 +27,3 @@ DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
 DOMAIN-SUFFIX,chime.com
 
-# 券商（美国本土账户）
-DOMAIN-SUFFIX,fidelity.com
-DOMAIN-SUFFIX,vanguard.com
-DOMAIN-SUFFIX,robinhood.com
-DOMAIN-SUFFIX,merrilledge.com
