@@ -8,6 +8,7 @@
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
+| ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 333 | VPSDance/ai-proxy-rules |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
 | paypal.yaml | PayPal（含 Braintree、Venmo 等） | 247 | blackmatrix7/ios_rule_script |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
@@ -54,7 +55,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → manus → paypal → wise → blued → lgbt → wechat → xiaohongshu → douyin → line → tiktok → streaming → google → apple
+muse → manus → ai → paypal → wise → blued → lgbt → wechat → xiaohongshu → douyin → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

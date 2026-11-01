@@ -113,6 +113,10 @@ proxy-groups:
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
+  - name: AI工具
+    type: select
+    proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
+
   - name: 流媒体
     type: select
     proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
@@ -212,6 +216,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/manus.yaml"
     path: ./ruleset/manus.yaml
     interval: 86400
+  ai:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/ai.yaml"
+    path: ./ruleset/ai.yaml
+    interval: 86400
   paypal:
     type: http
     behavior: classical
@@ -307,6 +318,7 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,4500)),DIRECT
   - RULE-SET,muse,Muse
   - RULE-SET,manus,Manus
+  - RULE-SET,ai,AI工具  # ChatGPT、Claude、Gemini 等，排在 google 前面
   - RULE-SET,paypal,PayPal
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued

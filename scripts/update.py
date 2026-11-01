@@ -16,12 +16,15 @@ V2FLY = "https://raw.githubusercontent.com/v2fly/domain-list-community/master/da
 VPSDANCE = "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash"
 
 # 输出文件 -> (标题, 上游列表)。上游为空表示只用 custom/ 里手动维护的内容。
+# EXCLUDE：生成某个文件时，去掉已经出现在其他文件里的规则（避免重复）。
 RULES = {
     "muse": ("Muse (Meta AI)", [f"{VPSDANCE}/meta-ai.yaml"]),
     "manus": ("Manus AI 智能体", [
         f"{VPSDANCE}/manus.yaml",
         f"{V2FLY}/manus",
     ]),
+    "ai": ("AI 工具（ChatGPT / Claude / Gemini / Grok / Perplexity / Copilot 等，不含 Muse、Manus）",
+           [f"{VPSDANCE}/global.yaml"]),
     "wise": ("Wise 国际汇款（原 TransferWise）", [f"{V2FLY}/wise"]),
     "paypal": ("PayPal（含 Braintree、Venmo 等）", [f"{BM}/PayPal/PayPal.yaml"]),
     "blued": ("Blued", [f"{BM}/Blued/Blued.yaml"]),
@@ -53,6 +56,8 @@ RULES = {
         f"{BM}/YouTube/YouTube.yaml",
     ]),
 }
+
+EXCLUDE = {"ai": ["muse", "manus"]}
 
 RULE_TYPES = ("DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "DOMAIN-REGEX", "IP-CIDR",
               "IP-CIDR6", "IP-ASN", "PROCESS-NAME", "PROCESS-PATH", "GEOIP", "GEOSITE")
@@ -106,11 +111,22 @@ def read_custom(name):
     return out
 
 
+def existing_rules(name):
+    path = os.path.join(ROOT, f"{name}.yaml")
+    if not os.path.exists(path):
+        return set()
+    return set(parse_clash_yaml(open(path, encoding="utf-8").read()))
+
+
 def build(name, title, upstreams):
     rules = []
     for url in upstreams:
         rules += parse_upstream(url, fetch(url))
     rules += read_custom(name)
+    excluded = set()
+    for other in EXCLUDE.get(name, []):
+        excluded |= existing_rules(other)
+    rules = [r for r in rules if r not in excluded]
     seen, uniq = set(), []
     for r in rules:
         if r not in seen:
