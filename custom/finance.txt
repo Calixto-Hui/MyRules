@@ -30,6 +30,15 @@ DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
 DOMAIN-SUFFIX,chime.com
 
+# 征信机构与信用分查询
+DOMAIN-SUFFIX,experian.com
+DOMAIN-SUFFIX,equifax.com
+DOMAIN-SUFFIX,transunion.com
+DOMAIN-SUFFIX,annualcreditreport.com
+DOMAIN-SUFFIX,myfico.com
+DOMAIN-SUFFIX,fico.com
+DOMAIN-SUFFIX,creditkarma.com
+
 # 安卓 App 包名（App 里的所有连接都走美国金融，包括第三方统计、验证服务）
 PROCESS-NAME,com.paypal.android.p2pmobile
 PROCESS-NAME,com.venmo
@@ -49,3 +58,8 @@ PROCESS-NAME,com.ally.MobileBanking
 PROCESS-NAME,com.marcus.android
 PROCESS-NAME,com.sofi.mobile
 PROCESS-NAME,com.onedebit.chime
+PROCESS-NAME,com.experian.android
+PROCESS-NAME,com.equifax.myequifax
+PROCESS-NAME,com.transunion.TransUnion
+PROCESS-NAME,com.myfico
+PROCESS-NAME,com.creditkarma.mobile
