@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,affirm.com
 
 # 信用建立
 DOMAIN-SUFFIX,kikoff.com
+PROCESS-NAME,com.kikoff
 
 # 银行
 DOMAIN-SUFFIX,chase.com
