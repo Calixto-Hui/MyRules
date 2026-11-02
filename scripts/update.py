@@ -132,6 +132,7 @@ def build(name, title, upstreams):
     excluded = set()
     for other in EXCLUDE.get(name, []):
         excluded |= existing_rules(other)
+    excluded |= set(read_custom(f"{name}.exclude"))  # custom/<name>.exclude.txt 里手动剔除的
     rules = [r for r in rules if r not in excluded]
     seen, uniq = set(), []
     for r in rules:

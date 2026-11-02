@@ -1,0 +1,48 @@
+# 从 AI 规则里剔除的条目（上游把一些通用第三方服务也算进了 AI，
+# 会把其他 App 的统计、验证、支付请求错误地拉进「AI工具」分组）
+# 每行一条，写法和规则完全一致
+
+# 错误监控 / 统计 / 风控（几乎所有 App 都在用）
+DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sentry
+DOMAIN-KEYWORD,sift
+DOMAIN-SUFFIX,sentry.io
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN,api.statsig.com
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN,cdn.growthbook.io
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,observeit.net
+DOMAIN,in.appcenter.ms
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,static.cloudflareinsights.com
+
+# 客服 / 登录 / 人机验证
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,identrust.com
+
+# 支付（归「美国金融」）
+DOMAIN-SUFFIX,stripe.com
+
+# 通用云服务 / CDN / 搜索
+IP-ASN,14061,no-resolve
+DOMAIN,storage.googleapis.com
+DOMAIN,api.cloudflare.com
+DOMAIN-SUFFIX,algolia.net
+DOMAIN,api.msn.com
+DOMAIN,assets.msn.com
+DOMAIN,location.microsoft.com
+DOMAIN-SUFFIX,awsstatic.com
+DOMAIN,cognito-identity.us-east-1.amazonaws.com
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,turn.livekit.cloud

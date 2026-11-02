@@ -8,7 +8,7 @@
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
-| ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 333 | VPSDance/ai-proxy-rules |
+| ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 296 | VPSDance/ai-proxy-rules |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
 | finance.yaml | 美国支付与银行：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Affirm、Kikoff、大通/美银/富国/花旗/运通等银行 | 308 | blackmatrix7、v2fly、自行整理 |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
@@ -56,7 +56,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → manus → ai → finance → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → line → tiktok → streaming → google → apple
+muse → manus → finance → ai → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 
@@ -83,6 +83,8 @@ DOMAIN-SUFFIX,example.com
 ```
 
 保存提交后，定时任务会立刻重新生成对应的 .yaml。
+
+想从上游规则里剔除某些条目，写到 custom/同名.exclude.txt（例如 custom/ai.exclude.txt）。
 
 lgbt.txt 没有上游，完全靠手动维护。如果某个 App 连不上，在客户端的「连接」页面看它访问了哪些域名，补进 lgbt.txt 就行。
 

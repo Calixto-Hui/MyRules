@@ -342,8 +342,8 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,4500)),DIRECT
   - RULE-SET,muse,Muse
   - RULE-SET,manus,Manus
-  - RULE-SET,ai,AI工具  # ChatGPT、Claude、Gemini 等，排在 google 前面
   - RULE-SET,finance,美国金融
+  - RULE-SET,ai,AI工具  # ChatGPT、Claude、Gemini 等，排在 google 前面
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued
   - RULE-SET,lgbt,LGBT应用
