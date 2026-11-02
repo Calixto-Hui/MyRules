@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 292
+# TOTAL: 308
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -276,7 +276,6 @@ payload:
   - DOMAIN-SUFFIX,plaid.com
   - DOMAIN-SUFFIX,affirm.com
   - DOMAIN-SUFFIX,kikoff.com
-  - PROCESS-NAME,com.kikoff
   - DOMAIN-SUFFIX,chase.com
   - DOMAIN-SUFFIX,jpmorgan.com
   - DOMAIN-SUFFIX,jpmorganchase.com
@@ -295,5 +294,22 @@ payload:
   - DOMAIN-SUFFIX,ally.com
   - DOMAIN-SUFFIX,marcus.com
   - DOMAIN-SUFFIX,sofi.com
-  - PROCESS-NAME,com.sofi.mobile
   - DOMAIN-SUFFIX,chime.com
+  - PROCESS-NAME,com.paypal.android.p2pmobile
+  - PROCESS-NAME,com.venmo
+  - PROCESS-NAME,com.squareup.cash
+  - PROCESS-NAME,com.zellepay.zelle
+  - PROCESS-NAME,com.affirm.central
+  - PROCESS-NAME,com.kikoff
+  - PROCESS-NAME,com.chase.sig.android
+  - PROCESS-NAME,com.infonow.bofa
+  - PROCESS-NAME,com.wf.wellsfargomobile
+  - PROCESS-NAME,com.citi.citimobile
+  - PROCESS-NAME,com.konylabs.capitalone
+  - PROCESS-NAME,com.usbank.mobilebanking
+  - PROCESS-NAME,com.americanexpress.android.acctsvcs.us
+  - PROCESS-NAME,com.discoverfinancial.mobile
+  - PROCESS-NAME,com.ally.MobileBanking
+  - PROCESS-NAME,com.marcus.android
+  - PROCESS-NAME,com.sofi.mobile
+  - PROCESS-NAME,com.onedebit.chime

@@ -8,7 +8,6 @@ DOMAIN-SUFFIX,affirm.com
 
 # 信用建立
 DOMAIN-SUFFIX,kikoff.com
-PROCESS-NAME,com.kikoff
 
 # 银行
 DOMAIN-SUFFIX,chase.com
@@ -29,6 +28,24 @@ DOMAIN-SUFFIX,discover.com
 DOMAIN-SUFFIX,ally.com
 DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
-PROCESS-NAME,com.sofi.mobile
 DOMAIN-SUFFIX,chime.com
 
+# 安卓 App 包名（App 里的所有连接都走美国金融，包括第三方统计、验证服务）
+PROCESS-NAME,com.paypal.android.p2pmobile
+PROCESS-NAME,com.venmo
+PROCESS-NAME,com.squareup.cash
+PROCESS-NAME,com.zellepay.zelle
+PROCESS-NAME,com.affirm.central
+PROCESS-NAME,com.kikoff
+PROCESS-NAME,com.chase.sig.android
+PROCESS-NAME,com.infonow.bofa
+PROCESS-NAME,com.wf.wellsfargomobile
+PROCESS-NAME,com.citi.citimobile
+PROCESS-NAME,com.konylabs.capitalone
+PROCESS-NAME,com.usbank.mobilebanking
+PROCESS-NAME,com.americanexpress.android.acctsvcs.us
+PROCESS-NAME,com.discoverfinancial.mobile
+PROCESS-NAME,com.ally.MobileBanking
+PROCESS-NAME,com.marcus.android
+PROCESS-NAME,com.sofi.mobile
+PROCESS-NAME,com.onedebit.chime
