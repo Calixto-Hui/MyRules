@@ -15,6 +15,15 @@ tcp-concurrent: true
 find-process-mode: strict
 global-client-fingerprint: chrome
 
+# ---------- 专用本地代理端口（给 AdsPower 等软件用）----------
+# 连这个端口的流量不看分流规则，全部走「AdsPower」分组里选定的节点
+listeners:
+  - name: adspower
+    type: mixed          # 同时支持 HTTP 和 SOCKS5
+    port: 7891
+    listen: 127.0.0.1    # 只允许本机访问
+    proxy: AdsPower
+
 # ---------- 规则数据库（GEOSITE / GEOIP）----------
 geodata-mode: true
 geo-auto-update: true
@@ -168,6 +177,10 @@ proxy-groups:
   - name: 苹果服务
     type: select
     proxies: [DIRECT, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点]
+
+  - name: AdsPower   # 7891 端口专用，选定一个节点后不要常换
+    type: select
+    proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
   - name: 漏网之鱼   # 在境外默认直连；回国时切到「节点选择」
     type: select
