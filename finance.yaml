@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 289
+# TOTAL: 290
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -275,6 +275,7 @@ payload:
   - DOMAIN-SUFFIX,zellepay.com
   - DOMAIN-SUFFIX,plaid.com
   - DOMAIN-SUFFIX,affirm.com
+  - DOMAIN-SUFFIX,kikoff.com
   - DOMAIN-SUFFIX,chase.com
   - DOMAIN-SUFFIX,jpmorgan.com
   - DOMAIN-SUFFIX,jpmorganchase.com

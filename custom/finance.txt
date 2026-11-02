@@ -6,6 +6,9 @@ DOMAIN-SUFFIX,zellepay.com
 DOMAIN-SUFFIX,plaid.com
 DOMAIN-SUFFIX,affirm.com
 
+# 信用建立
+DOMAIN-SUFFIX,kikoff.com
+
 # 银行
 DOMAIN-SUFFIX,chase.com
 DOMAIN-SUFFIX,jpmorgan.com
