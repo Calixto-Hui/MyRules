@@ -29,5 +29,6 @@ DOMAIN-SUFFIX,discover.com
 DOMAIN-SUFFIX,ally.com
 DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
+PROCESS-NAME,com.sofi.mobile
 DOMAIN-SUFFIX,chime.com
 
