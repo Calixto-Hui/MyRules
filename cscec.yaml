@@ -1,0 +1,5 @@
+# NAME: 中建集团
+# CUSTOM: custom/cscec.txt
+# TOTAL: 1
+payload:
+  - DOMAIN-SUFFIX,cscec.com
