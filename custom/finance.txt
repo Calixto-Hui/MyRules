@@ -29,6 +29,9 @@ DOMAIN-SUFFIX,ally.com
 DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
 DOMAIN-SUFFIX,chime.com
+DOMAIN-SUFFIX,nu.com
+DOMAIN-SUFFIX,nubank.com
+DOMAIN-SUFFIX,nubank.com.br
 
 # 征信机构与信用分查询
 DOMAIN-SUFFIX,experian.com
@@ -58,6 +61,7 @@ PROCESS-NAME,com.ally.MobileBanking
 PROCESS-NAME,com.marcus.android
 PROCESS-NAME,com.sofi.mobile
 PROCESS-NAME,com.onedebit.chime
+PROCESS-NAME,com.nu.production
 PROCESS-NAME,com.experian.android
 PROCESS-NAME,com.equifax.myequifax
 PROCESS-NAME,com.transunion.TransUnion

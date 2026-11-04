@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 320
+# TOTAL: 324
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -295,6 +295,9 @@ payload:
   - DOMAIN-SUFFIX,marcus.com
   - DOMAIN-SUFFIX,sofi.com
   - DOMAIN-SUFFIX,chime.com
+  - DOMAIN-SUFFIX,nu.com
+  - DOMAIN-SUFFIX,nubank.com
+  - DOMAIN-SUFFIX,nubank.com.br
   - DOMAIN-SUFFIX,experian.com
   - DOMAIN-SUFFIX,equifax.com
   - DOMAIN-SUFFIX,transunion.com
@@ -320,6 +323,7 @@ payload:
   - PROCESS-NAME,com.marcus.android
   - PROCESS-NAME,com.sofi.mobile
   - PROCESS-NAME,com.onedebit.chime
+  - PROCESS-NAME,com.nu.production
   - PROCESS-NAME,com.experian.android
   - PROCESS-NAME,com.equifax.myequifax
   - PROCESS-NAME,com.transunion.TransUnion
