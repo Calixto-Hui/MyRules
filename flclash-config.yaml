@@ -178,10 +178,6 @@ proxy-groups:
     type: select
     proxies: [英国节点, 全部节点, TAG-GLOBAL, EdNovas, 节点选择, DIRECT]
 
-  - name: 美国WiFi通话   # Tello / T-Mobile 等美国运营商的 Wi-Fi 通话；默认直连，不行再切美国节点
-    type: select
-    proxies: [DIRECT, 美国节点, 全部节点, TAG-GLOBAL, EdNovas, 节点选择]
-
   - name: 中建集团   # 公司网站和系统，默认直连；国外打不开时切到中国大陆节点
     type: select
     proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
@@ -324,13 +320,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/ukwifi.yaml"
     path: ./ruleset/ukwifi.yaml
     interval: 86400
-  uswifi:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/uswifi.yaml"
-    path: ./ruleset/uswifi.yaml
-    interval: 86400
   xiaohongshu:
     type: http
     behavior: classical
@@ -380,8 +369,6 @@ rules:
   - GEOIP,private,DIRECT,no-resolve
   # 英国运营商 Wi-Fi 通话：走英国节点（必须排在下面的直连规则前面）
   - RULE-SET,ukwifi,英国WiFi通话
-  # 美国运营商 Wi-Fi 通话：单独分组，可在直连和美国节点之间切换
-  - RULE-SET,uswifi,美国WiFi通话
   # 其他运营商 Wi-Fi 通话（Tello / T-Mobile 等）：IPsec 隧道直连，否则会报 ER081
   - DOMAIN-SUFFIX,3gppnetwork.org,DIRECT
   - AND,((NETWORK,UDP),(DST-PORT,500)),DIRECT

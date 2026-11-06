@@ -1,9 +1,0 @@
-# 美国运营商（Tello、T-Mobile、AT&T、Verizon 等）的 Wi-Fi 通话服务器（ePDG）
-# 美国国家码 310-316
-DOMAIN-SUFFIX,mcc310.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc311.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc312.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc313.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc314.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc315.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc316.pub.3gppnetwork.org
