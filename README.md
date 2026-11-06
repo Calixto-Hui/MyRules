@@ -17,7 +17,6 @@
 | douyin.yaml | 抖音（含火山版、汽水音乐、西瓜视频、今日头条） | 78 | blackmatrix7/ios_rule_script、v2fly |
 | chinamedia.yaml | 国内流媒体：爱奇艺、优酷、腾讯视频、芒果TV、B站、央视、QQ音乐、网易云音乐等 | 412 | blackmatrix7/ios_rule_script |
 | cscec.yaml | 中建集团（cscec.com、chinaconstruction.com） | 2 | 自行整理 |
-| ukwifi.yaml | 英国运营商 Wi-Fi 通话（ePDG + Vodafone 授权服务器） | 3 | 自行整理 |
 | xiaohongshu.yaml | 小红书（含 RedNote） | 11 | blackmatrix7/ios_rule_script、v2fly |
 | wechat.yaml | 微信 | 31 | blackmatrix7/ios_rule_script |
 | line.yaml | LINE | 37 | blackmatrix7/ios_rule_script、v2fly |
@@ -97,12 +96,3 @@ lgbt.txt 没有上游，完全靠手动维护。如果某个 App 连不上，在
 - VPSDance/ai-proxy-rules：MIT
 - juner922/muse-loon-rules
 - Grindr 域名参考：RobbieTechie/Grindr-API 文档
-
-## Wi-Fi 通话（安卓，需要在 FlClash 里手动设置一次）
-
-- **英国 eSIM（VOXI / Vodafone 等）**：走「英国WiFi通话」分组，经英国节点出去。「英国节点」里固定选一个节点，不要换。
-- **美国卡（Tello / T-Mobile 等）**：经过 FlClash 转发会报 ER081，必须绕开 VPN。
-  FlClash →「工具」→「进阶配置」→「网络」→「排除路由地址」添加 `208.54.0.0/16`（T-Mobile 的 IP 段），
-  配合配置里的 fake-ip-filter（美国国家码 310-316 拿真实 IP）生效。
-- 不要在「访问控制」里把电话服务排除出 VPN，否则英国卡拿不到英国 IP。
-

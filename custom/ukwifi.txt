@@ -1,6 +1,0 @@
-# 英国运营商的 Wi-Fi 通话服务器（ePDG）
-# 域名格式：epdg.epc.mncXXX.mcc234.pub.3gppnetwork.org，英国的国家码是 234 和 235
-DOMAIN-SUFFIX,mcc234.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mcc235.pub.3gppnetwork.org
-# Vodafone 英国的开通/授权服务器（手机开 Wi-Fi 通话前先来这里查资格，要英国 IP）
-DOMAIN-SUFFIX,ondemandconnectivity.com
