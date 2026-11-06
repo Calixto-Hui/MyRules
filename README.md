@@ -16,7 +16,7 @@
 | streaming.yaml | Netflix、Disney+、HBO、Prime Video、Spotify | 1424 | blackmatrix7/ios_rule_script |
 | douyin.yaml | 抖音（含火山版、汽水音乐、西瓜视频、今日头条） | 78 | blackmatrix7/ios_rule_script、v2fly |
 | chinamedia.yaml | 国内流媒体：爱奇艺、优酷、腾讯视频、芒果TV、B站、央视、QQ音乐、网易云音乐等 | 412 | blackmatrix7/ios_rule_script |
-| cscec.yaml | 中建集团（cscec.com） | 1 | 自行整理 |
+| cscec.yaml | 中建集团（cscec.com、chinaconstruction.com） | 2 | 自行整理 |
 | xiaohongshu.yaml | 小红书（含 RedNote） | 11 | blackmatrix7/ios_rule_script、v2fly |
 | wechat.yaml | 微信 | 31 | blackmatrix7/ios_rule_script |
 | line.yaml | LINE | 37 | blackmatrix7/ios_rule_script、v2fly |
