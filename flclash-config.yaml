@@ -46,6 +46,15 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.ntp.org"
+    # 美国运营商（Tello / T-Mobile 等，国家码 310-316）的 Wi-Fi 通话拿真实 IP，
+    # 配合 FlClash「排除路由地址」里的 208.54.0.0/16，让它完全绕过 VPN，跟关掉 VPN 时一样
+    - "+.mcc310.pub.3gppnetwork.org"
+    - "+.mcc311.pub.3gppnetwork.org"
+    - "+.mcc312.pub.3gppnetwork.org"
+    - "+.mcc313.pub.3gppnetwork.org"
+    - "+.mcc314.pub.3gppnetwork.org"
+    - "+.mcc315.pub.3gppnetwork.org"
+    - "+.mcc316.pub.3gppnetwork.org"
   default-nameserver:
     - 1.1.1.1
     - 8.8.8.8

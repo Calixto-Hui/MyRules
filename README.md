@@ -96,3 +96,10 @@ lgbt.txt 没有上游，完全靠手动维护。如果某个 App 连不上，在
 - VPSDance/ai-proxy-rules：MIT
 - juner922/muse-loon-rules
 - Grindr 域名参考：RobbieTechie/Grindr-API 文档
+
+## Tello Wi-Fi 通话（安卓）
+
+经过 FlClash 转发会报 ER081，所以让它绕开 VPN，需要两样配合：
+- 配置里的 fake-ip-filter：美国国家码 310-316 的 Wi-Fi 通话域名拿真实 IP（已写好）。
+- FlClash →「工具」→「进阶配置」→「网络」→「排除路由地址」添加 `208.54.0.0/16`（T-Mobile 的 IP 段，换手机要重新加）。
+
