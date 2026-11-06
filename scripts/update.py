@@ -53,6 +53,7 @@ RULES = {
                    [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
     "cscec": ("中建集团", []),
     "ukwifi": ("英国运营商 Wi-Fi 通话（ePDG，MCC 234/235）", []),
+    "uswifi": ("美国运营商 Wi-Fi 通话（ePDG，MCC 310-316）", []),
     "wechat": ("微信", [f"{BM}/WeChat/WeChat.yaml"]),
     "line": ("LINE", [
         f"{BM}/Line/Line.yaml",

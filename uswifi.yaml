@@ -1,0 +1,11 @@
+# NAME: 美国运营商 Wi-Fi 通话（ePDG，MCC 310-316）
+# CUSTOM: custom/uswifi.txt
+# TOTAL: 7
+payload:
+  - DOMAIN-SUFFIX,mcc310.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc311.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc312.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc313.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc314.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc315.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,mcc316.pub.3gppnetwork.org
