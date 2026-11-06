@@ -46,7 +46,15 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.ntp.org"
-    - "+.3gppnetwork.org"   # Wi-Fi 通话（运营商 ePDG 服务器）要拿真实 IP
+    # 美国运营商（Tello / T-Mobile 等，国家码 310-316）的 Wi-Fi 通话拿真实 IP，直连
+    # 英国等其他国家不在这里，走假 IP，才能按域名分流到「英国WiFi通话」分组
+    - "+.mcc310.pub.3gppnetwork.org"
+    - "+.mcc311.pub.3gppnetwork.org"
+    - "+.mcc312.pub.3gppnetwork.org"
+    - "+.mcc313.pub.3gppnetwork.org"
+    - "+.mcc314.pub.3gppnetwork.org"
+    - "+.mcc315.pub.3gppnetwork.org"
+    - "+.mcc316.pub.3gppnetwork.org"
   default-nameserver:
     - 1.1.1.1
     - 8.8.8.8
@@ -165,6 +173,10 @@ proxy-groups:
   - name: 抖音
     type: select
     proxies: [DIRECT, 中国大陆节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 美国节点, 英国节点, 德国节点, 全部节点]
+
+  - name: 英国WiFi通话   # 英国 eSIM 的 Wi-Fi 通话走英国 IP；选定一个节点后不要换，换节点会断线
+    type: select
+    proxies: [英国节点, 全部节点, TAG-GLOBAL, EdNovas, 节点选择, DIRECT]
 
   - name: 中建集团   # 公司网站和系统，默认直连；国外打不开时切到中国大陆节点
     type: select
@@ -300,6 +312,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/cscec.yaml"
     path: ./ruleset/cscec.yaml
     interval: 86400
+  ukwifi:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/ukwifi.yaml"
+    path: ./ruleset/ukwifi.yaml
+    interval: 86400
   xiaohongshu:
     type: http
     behavior: classical
@@ -347,7 +366,9 @@ rule-providers:
 rules:
   - GEOSITE,private,DIRECT
   - GEOIP,private,DIRECT,no-resolve
-  # Wi-Fi 通话（Tello / T-Mobile 等）：IPsec 隧道直连，否则会报 ER081
+  # 英国运营商 Wi-Fi 通话：走英国节点（必须排在下面的直连规则前面）
+  - RULE-SET,ukwifi,英国WiFi通话
+  # 其他运营商 Wi-Fi 通话（Tello / T-Mobile 等）：IPsec 隧道直连，否则会报 ER081
   - DOMAIN-SUFFIX,3gppnetwork.org,DIRECT
   - AND,((NETWORK,UDP),(DST-PORT,500)),DIRECT
   - AND,((NETWORK,UDP),(DST-PORT,4500)),DIRECT
