@@ -1,6 +1,7 @@
 # NAME: 英国运营商 Wi-Fi 通话（ePDG，MCC 234/235）
 # CUSTOM: custom/ukwifi.txt
-# TOTAL: 2
+# TOTAL: 3
 payload:
   - DOMAIN-SUFFIX,mcc234.pub.3gppnetwork.org
   - DOMAIN-SUFFIX,mcc235.pub.3gppnetwork.org
+  - DOMAIN-SUFFIX,ondemandconnectivity.com
