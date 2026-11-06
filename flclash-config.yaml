@@ -222,8 +222,9 @@ proxy-groups:
     type: select
     use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
     filter: "美国|洛杉矶|圣何塞|西雅图|纽约|US|USA|United States|🇺🇸"
-  - name: 英国节点
-    <<: *auto
+  - name: 英国节点   # 手动选择，不自动测速（Wi-Fi 通话要固定 IP）
+    type: select
+    use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
     filter: "英国|伦敦|UK|GB|United Kingdom|🇬🇧"
   - name: 德国节点
     <<: *auto
