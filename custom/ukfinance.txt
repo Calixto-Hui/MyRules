@@ -1,0 +1,7 @@
+# 英国金融 App 和网站（没有上游，手动维护）
+# 每行一条，格式：类型,域名 或 PROCESS-NAME,安卓包名
+
+# Marriott Bonvoy 借记卡（Currensea 发行）
+DOMAIN-SUFFIX,currensea.com
+DOMAIN-SUFFIX,currensea.co.uk
+PROCESS-NAME,com.marriottdebitcard.app

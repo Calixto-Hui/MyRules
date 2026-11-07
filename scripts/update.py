@@ -51,6 +51,7 @@ RULES = {
     ]),
     "chinamedia": ("国内流媒体（爱奇艺 / 优酷 / 腾讯视频 / 芒果TV / B站 / 央视 / QQ音乐 / 网易云音乐等）",
                    [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
+    "ukfinance": ("英国金融（Marriott Bonvoy 借记卡 / Currensea 等）", []),
     "cscec": ("中建集团", []),
     "wechat": ("微信", [f"{BM}/WeChat/WeChat.yaml"]),
     "line": ("LINE", [

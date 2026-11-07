@@ -9,6 +9,7 @@
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
 | ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 296 | VPSDance/ai-proxy-rules |
+| ukfinance.yaml | 英国金融：Marriott Bonvoy 借记卡（Currensea） | 3 | 自行整理 |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
 | finance.yaml | 美国支付与银行：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Affirm、Kikoff、大通/美银/富国/花旗/运通等银行、Nubank US（Nu）、三大征信机构（Experian / Equifax / TransUnion）、myFICO、Credit Karma | 324 | blackmatrix7、v2fly、自行整理 |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
@@ -57,7 +58,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → manus → finance → ai → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
+muse → manus → finance → ukfinance → ai → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

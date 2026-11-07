@@ -1,0 +1,7 @@
+# NAME: 英国金融（Marriott Bonvoy 借记卡 / Currensea 等）
+# CUSTOM: custom/ukfinance.txt
+# TOTAL: 3
+payload:
+  - DOMAIN-SUFFIX,currensea.com
+  - DOMAIN-SUFFIX,currensea.co.uk
+  - PROCESS-NAME,com.marriottdebitcard.app
