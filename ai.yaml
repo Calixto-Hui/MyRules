@@ -1,7 +1,7 @@
 # NAME: AI 工具（ChatGPT / Claude / Gemini / Grok / Perplexity / Copilot 等，不含 Muse、Manus）
 # SOURCE: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/global.yaml
 # CUSTOM: custom/ai.txt
-# TOTAL: 296
+# TOTAL: 298
 payload:
   - DOMAIN-SUFFIX,firefly.adobe.com
   - DOMAIN-SUFFIX,firefly.adobe.io
@@ -101,6 +101,7 @@ payload:
   - DOMAIN,copilotprodattachments.blob.core.windows.net
   - DOMAIN,gateway.bingviz.microsoft.net
   - DOMAIN,gateway.bingviz.microsoftapp.net
+  - DOMAIN,production-copilot-host-westus.webpubsub.azure.com
   - DOMAIN,sydney.bing.com
   - DOMAIN-SUFFIX,api.microsoftapp.net
   - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
@@ -292,6 +293,7 @@ payload:
   - PROCESS-NAME,windsurf
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,grok.x.com
+  - DOMAIN-SUFFIX,grokbot.com
   - DOMAIN-SUFFIX,grokipedia.com
   - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,you.com
