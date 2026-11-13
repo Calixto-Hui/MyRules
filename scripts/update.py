@@ -53,7 +53,7 @@ RULES = {
                    [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
     "ukfinance": ("英国金融（Marriott Bonvoy 借记卡 / Currensea 等）", []),
     "cscec": ("中建集团", []),
-    "wechat": ("微信", [f"{BM}/WeChat/WeChat.yaml"]),
+    "wechat": ("微信 / 企业微信", [f"{BM}/WeChat/WeChat.yaml"]),
     "line": ("LINE", [
         f"{BM}/Line/Line.yaml",
         f"{V2FLY}/line",

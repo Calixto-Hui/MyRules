@@ -1,2 +1,14 @@
 # wechat 补充域名（上游没有、你想自己加的写在这里）
 # 每行一条，例如：DOMAIN-SUFFIX,example.com
+
+# 企业微信（WeCom）的域名大多在 weixin.qq.com、qpic.cn 下，上游已覆盖；这里补企业微信专用的
+DOMAIN-SUFFIX,wecom.work
+DOMAIN-SUFFIX,work.weixin.qq.com
+
+# 按 App 进程匹配：语音/视频通话直接连腾讯服务器 IP，不走域名，只有按进程才抓得全
+# 安卓
+PROCESS-NAME,com.tencent.mm
+PROCESS-NAME,com.tencent.wework
+# Mac
+PROCESS-NAME,WeChat
+PROCESS-NAME,企业微信

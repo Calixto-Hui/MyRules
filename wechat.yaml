@@ -1,7 +1,7 @@
-# NAME: 微信
+# NAME: 微信 / 企业微信
 # SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
 # CUSTOM: custom/wechat.txt
-# TOTAL: 31
+# TOTAL: 37
 payload:
   - DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
   - DOMAIN,btrace.qq.com
@@ -34,3 +34,9 @@ payload:
   - DOMAIN-SUFFIX,wxs.qq.com
   - DOMAIN-SUFFIX,yun-hl.3g.qq.com
   - IP-ASN,132203
+  - DOMAIN-SUFFIX,wecom.work
+  - DOMAIN-SUFFIX,work.weixin.qq.com
+  - PROCESS-NAME,com.tencent.mm
+  - PROCESS-NAME,com.tencent.wework
+  - PROCESS-NAME,WeChat
+  - PROCESS-NAME,企业微信
