@@ -45,6 +45,7 @@ DOMAIN-SUFFIX,annualcreditreport.com
 DOMAIN-SUFFIX,myfico.com
 DOMAIN-SUFFIX,fico.com
 DOMAIN-SUFFIX,creditkarma.com
+DOMAIN-SUFFIX,chexsystems.com
 
 # 安卓 App 包名（App 里的所有连接都走美国金融，包括第三方统计、验证服务）
 PROCESS-NAME,com.paypal.android.p2pmobile

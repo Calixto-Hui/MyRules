@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 327
+# TOTAL: 328
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -307,6 +307,7 @@ payload:
   - DOMAIN-SUFFIX,myfico.com
   - DOMAIN-SUFFIX,fico.com
   - DOMAIN-SUFFIX,creditkarma.com
+  - DOMAIN-SUFFIX,chexsystems.com
   - PROCESS-NAME,com.paypal.android.p2pmobile
   - PROCESS-NAME,com.venmo
   - PROCESS-NAME,com.squareup.cash
