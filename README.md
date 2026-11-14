@@ -11,7 +11,7 @@
 | ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 296 | VPSDance/ai-proxy-rules |
 | ukfinance.yaml | 英国金融：Marriott Bonvoy 借记卡（Currensea） | 3 | 自行整理 |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
-| finance.yaml | 美国支付与银行：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Affirm、Kikoff、大通/美银/富国/花旗/运通等银行、Nubank US（Nu）、三大征信机构（Experian / Equifax / TransUnion）、myFICO、Credit Karma | 324 | blackmatrix7、v2fly、自行整理 |
+| finance.yaml | 美国支付与银行：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Affirm、Kikoff、大通/美银/富国/花旗/运通等银行、Nubank US（Nu）、三大征信机构（Experian / Equifax / TransUnion）、Rakuten 返利、myFICO、Credit Karma | 327 | blackmatrix7、v2fly、自行整理 |
 | blued.yaml | Blued | 33 | blackmatrix7/ios_rule_script |
 | lgbt.yaml | Grindr、Hornet、Jack'd、Scruff、Romeo、Taimi、HER | 12 | 自行整理 |
 | streaming.yaml | Netflix、Disney+、HBO、Prime Video、Spotify | 1424 | blackmatrix7/ios_rule_script |
