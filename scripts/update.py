@@ -53,6 +53,7 @@ RULES = {
                    [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
     "ukfinance": ("英国金融（Marriott Bonvoy 借记卡 / Currensea 等）", []),
     "cscec": ("中建集团", []),
+    "x": ("X（原 Twitter）", [f"{BM}/Twitter/Twitter_No_Resolve.yaml"]),
     "wechat": ("微信 / 企业微信", [f"{BM}/WeChat/WeChat.yaml"]),
     "line": ("LINE", [
         f"{BM}/Line/Line.yaml",
@@ -65,7 +66,7 @@ RULES = {
     ]),
 }
 
-EXCLUDE = {"ai": ["muse", "manus"]}
+EXCLUDE = {"ai": ["muse", "manus"], "x": ["ai"]}
 
 RULE_TYPES = ("DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "DOMAIN-REGEX", "IP-CIDR",
               "IP-CIDR6", "IP-ASN", "PROCESS-NAME", "PROCESS-PATH", "GEOIP", "GEOSITE")

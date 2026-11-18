@@ -1,0 +1,3 @@
+# X（原 Twitter）补充（上游 blackmatrix7 没收录的）
+# 每行一条，格式：类型,域名 或 PROCESS-NAME,安卓包名
+PROCESS-NAME,com.twitter.android
