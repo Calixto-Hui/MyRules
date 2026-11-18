@@ -1,7 +1,7 @@
 # NAME: AI 工具（ChatGPT / Claude / Gemini / Grok / Perplexity / Copilot 等，不含 Muse、Manus）
 # SOURCE: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/global.yaml
 # CUSTOM: custom/ai.txt
-# TOTAL: 298
+# TOTAL: 299
 payload:
   - DOMAIN-SUFFIX,firefly.adobe.com
   - DOMAIN-SUFFIX,firefly.adobe.io
@@ -125,6 +125,7 @@ payload:
   - DOMAIN-SUFFIX,eigent.ai
   - DOMAIN-SUFFIX,elevenlabs.com
   - DOMAIN-SUFFIX,elevenlabs.io
+  - DOMAIN-SUFFIX,elevenlabsusercontent.com
   - DOMAIN-SUFFIX,factory.ai
   - DOMAIN-SUFFIX,fireworks.ai
   - DOMAIN-SUFFIX,gamma.app
