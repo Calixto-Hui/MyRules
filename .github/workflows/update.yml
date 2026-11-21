@@ -8,6 +8,8 @@ on:
     paths:
       - "custom/**"          # 改了 custom/ 里的文件就立刻重新生成
       - "scripts/update.py"
+      - "flclash-config.yaml"   # 改了 FlClash 配置就自动重新生成 Stash 版
+      - "scripts/make_stash.py"
 
 permissions:
   contents: write
@@ -24,6 +26,11 @@ jobs:
 
       - name: 拉取上游并生成规则
         run: python scripts/update.py
+
+      - name: 生成 Stash 配置
+        run: |
+          pip install pyyaml
+          python scripts/make_stash.py
 
       - name: 有变化就提交
         run: |

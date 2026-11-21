@@ -57,6 +57,17 @@ rules:
 
 订阅链接只保存在 FlClash 本地，不会出现在 GitHub 上。需要 FlClash 0.8.85 或更新版本。
 
+## Stash 设置（iPhone / iPad / Mac）
+
+`stash-config.yaml` 是 Stash 专用版，由 `scripts/make_stash.py` 根据 `flclash-config.yaml` 自动生成（改 FlClash 配置后 GitHub Actions 会自动重新生成，不要直接改 Stash 版）。分组、规则和 FlClash 一致，另外加了策略组图标；区别是没有 AdsPower 专用端口（7891），安卓包名规则在 Stash 上不生效。
+
+1. **导入配置**：Stash →「配置文件」→ 右上角 + →「从 URL 下载」，填
+   `https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/stash-config.yaml`，开启自动更新。
+2. **导入覆写**：把 `stash-subs.stoverride` 里的两个订阅链接换成自己的，存成文件后在 Stash「覆写」里导入并启用（也可以在 App 里新建本地覆写，把内容粘贴进去）。
+3. **第一次用**：在「英国节点」「美国节点」里各手动选一个节点。
+
+订阅链接只保存在 Stash 本地，不会出现在 GitHub 上。
+
 ## 建议的规则顺序
 
 muse → manus → finance → ukfinance → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple

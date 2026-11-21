@@ -1,0 +1,7 @@
+name: 机场订阅
+desc: 给 stash-config.yaml 填入 TAG-GLOBAL 和 EdNovas 的订阅链接（只填 url，其余设置沿用配置文件）
+proxy-providers:
+  TAG-GLOBAL:
+    url: "这里粘贴TAG-GLOBAL的订阅链接"
+  EdNovas:
+    url: "这里粘贴EdNovas的订阅链接"
