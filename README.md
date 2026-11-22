@@ -9,7 +9,7 @@
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
 | ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 296 | VPSDance/ai-proxy-rules |
-| ukfinance.yaml | 英国：Marriott Bonvoy 借记卡（Currensea）、雅高 Accor 官网/ALL App/旗下品牌、Aiia 开放银行 | 18 | 自行整理 |
+| ukfinance.yaml | 英国：Marriott Bonvoy 借记卡（Currensea）、雅高 Accor 官网/ALL App/旗下品牌、Aiia 开放银行 | 19 | 自行整理 |
 | x.yaml | X（原 Twitter），含安卓 App 进程（Grok 归 AI工具） | 33 | blackmatrix7/ios_rule_script |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
 | finance.yaml | 美国支付与银行：PayPal（含 Venmo、Braintree）、Stripe、Cash App、Zelle、Plaid、Affirm、Kikoff、大通/美银/富国/花旗/运通等银行、Nubank US（Nu）、三大征信机构（Experian / Equifax / TransUnion）、Rakuten 返利、myFICO、Credit Karma、ChexSystems | 328 | blackmatrix7、v2fly、自行整理 |

@@ -24,3 +24,5 @@ PROCESS-NAME,com.accor.appli.hybrid
 # Aiia（Mastercard 旗下开放银行授权，英国银行账户绑定时会跳转）
 DOMAIN-SUFFIX,aiia.eu
 DOMAIN-SUFFIX,nordicapigateway.com
+# Aiia 被 Mastercard 收购后的新站点（只加这个子域名，不影响 Mastercard 其他服务）
+DOMAIN-SUFFIX,openbankingeu.mastercard.com
