@@ -28,6 +28,8 @@ DOMAIN-SUFFIX,discover.com
 DOMAIN-SUFFIX,ally.com
 DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
+# SoFi App 的 Glassbox 行为分析上报，跟 App 走同一个节点
+DOMAIN-SUFFIX,sofi.glassboxdigital.io
 DOMAIN-SUFFIX,chime.com
 DOMAIN-SUFFIX,nu.com
 DOMAIN-SUFFIX,nubank.com

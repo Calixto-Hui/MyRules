@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 328
+# TOTAL: 329
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -294,6 +294,7 @@ payload:
   - DOMAIN-SUFFIX,ally.com
   - DOMAIN-SUFFIX,marcus.com
   - DOMAIN-SUFFIX,sofi.com
+  - DOMAIN-SUFFIX,sofi.glassboxdigital.io
   - DOMAIN-SUFFIX,chime.com
   - DOMAIN-SUFFIX,nu.com
   - DOMAIN-SUFFIX,nubank.com
