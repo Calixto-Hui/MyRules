@@ -75,3 +75,7 @@ PROCESS-NAME,com.transunion.TransUnion
 PROCESS-NAME,com.myfico
 PROCESS-NAME,com.creditkarma.mobile
 PROCESS-NAME,com.ebates
+
+# Anytime Mailbox 美国虚拟地址（iOS 走域名，安卓走包名）
+DOMAIN-SUFFIX,anytimemailbox.com
+PROCESS-NAME,com.anytimemailbox.renter
