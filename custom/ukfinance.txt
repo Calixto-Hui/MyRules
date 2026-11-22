@@ -20,3 +20,6 @@ DOMAIN-SUFFIX,raffles.com
 DOMAIN-SUFFIX,swissotel.com
 DOMAIN-SUFFIX,mamashelter.com
 PROCESS-NAME,com.accor.appli.hybrid
+
+# Aiia（Mastercard 旗下开放银行授权，英国银行账户绑定时会跳转）
+DOMAIN-SUFFIX,aiia.eu

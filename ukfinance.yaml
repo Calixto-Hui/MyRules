@@ -1,6 +1,6 @@
 # NAME: 英国（Marriott Bonvoy 借记卡 / Currensea、雅高 Accor 等）
 # CUSTOM: custom/ukfinance.txt
-# TOTAL: 16
+# TOTAL: 17
 payload:
   - DOMAIN-SUFFIX,currensea.com
   - DOMAIN-SUFFIX,currensea.co.uk
@@ -18,3 +18,4 @@ payload:
   - DOMAIN-SUFFIX,swissotel.com
   - DOMAIN-SUFFIX,mamashelter.com
   - PROCESS-NAME,com.accor.appli.hybrid
+  - DOMAIN-SUFFIX,aiia.eu
