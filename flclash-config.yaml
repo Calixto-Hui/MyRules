@@ -9,7 +9,7 @@ mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: info
-ipv6: false
+ipv6: true   # 允许 IPv6 连接（WhatsApp 等直接连 IPv6 地址的 App 需要）；DNS 里仍只解析 IPv4
 unified-delay: true
 tcp-concurrent: true
 find-process-mode: strict
