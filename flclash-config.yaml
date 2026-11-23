@@ -13,7 +13,6 @@ ipv6: true   # 允许 IPv6 连接（WhatsApp 等直接连 IPv6 地址的 App 需
 unified-delay: true
 tcp-concurrent: true
 find-process-mode: strict
-global-client-fingerprint: chrome
 
 # ---------- 专用本地代理端口（给 AdsPower 等软件用）----------
 # 连这个端口的流量不看分流规则，全部走「AdsPower」分组里选定的节点
