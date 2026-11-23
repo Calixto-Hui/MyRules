@@ -87,6 +87,22 @@ proxy-groups:
   use:
   - EdNovas
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+- name: WhatsApp
+  type: select
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 美国节点
+  - 英国节点
+  - 香港节点
+  - 台湾节点
+  - 日本节点
+  - 新加坡节点
+  - 韩国节点
+  - 德国节点
+  - 中国大陆节点
+  - 全部节点
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
 - name: Muse
   type: select
   proxies:
@@ -471,6 +487,13 @@ proxy-groups:
   lazy: true
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rule-providers:
+  whatsapp:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/whatsapp.yaml
+    path: ./ruleset/whatsapp.yaml
+    interval: 86400
   muse:
     type: http
     behavior: classical
@@ -614,6 +637,7 @@ rules:
 - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
 - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+- RULE-SET,whatsapp,WhatsApp
 - RULE-SET,muse,Muse
 - RULE-SET,manus,Manus
 - RULE-SET,finance,美国金融

@@ -122,6 +122,10 @@ proxy-groups:
     use: [EdNovas]
 
   # 各服务分流（每个都可以在 FlClash 里单独切节点，所有分组都能选直连）
+  - name: WhatsApp   # 沙特直连可用，默认直连；整个 App 走同一个出口，避免一半直连一半走代理导致登录失败
+    type: select
+    proxies: [DIRECT, 节点选择, 美国节点, 英国节点, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 德国节点, 中国大陆节点, 全部节点]
+
   - name: Muse
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
@@ -240,6 +244,13 @@ proxy-groups:
 
 # ---------- 规则集（来自 github.com/Calixto-Hui/MyRules）----------
 rule-providers:
+  whatsapp:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/whatsapp.yaml"
+    path: ./ruleset/whatsapp.yaml
+    interval: 86400
   muse:
     type: http
     behavior: classical
@@ -378,6 +389,7 @@ rule-providers:
 rules:
   - GEOSITE,private,DIRECT
   - GEOIP,private,DIRECT,no-resolve
+  - RULE-SET,whatsapp,WhatsApp
   - RULE-SET,muse,Muse
   - RULE-SET,manus,Manus
   - RULE-SET,finance,美国金融

@@ -20,6 +20,7 @@
 | chinamedia.yaml | 国内流媒体：爱奇艺、优酷、腾讯视频、芒果TV、B站、央视、QQ音乐、网易云音乐等 | 412 | blackmatrix7/ios_rule_script |
 | cscec.yaml | 中建集团（cscec.com、chinaconstruction.com） | 2 | 自行整理 |
 | xiaohongshu.yaml | 小红书（含 RedNote） | 11 | blackmatrix7/ios_rule_script、v2fly |
+| whatsapp.yaml | WhatsApp（含 Mac/安卓 App 进程，默认直连） | 16 | blackmatrix7/ios_rule_script |
 | wechat.yaml | 微信、企业微信（含 App 进程，通话也能抓到） | 37 | blackmatrix7/ios_rule_script |
 | line.yaml | LINE | 37 | blackmatrix7/ios_rule_script、v2fly |
 | tiktok.yaml | TikTok | 35 | blackmatrix7/ios_rule_script |
@@ -70,7 +71,7 @@ rules:
 
 ## 建议的规则顺序
 
-muse → manus → finance → ukfinance → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
+whatsapp → muse → manus → finance → ukfinance → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

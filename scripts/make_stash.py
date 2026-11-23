@@ -31,7 +31,7 @@ ICON = "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/{}.p
 ICONS = {
     "节点选择": "Proxy", "自动选择": "Auto", "全部节点": "Global",
     "TAG-GLOBAL": "Airport", "EdNovas": "Airport",
-    "Muse": "AI", "Manus": "AI", "AI工具": "ChatGPT",
+    "WhatsApp": "Facebook", "Muse": "AI", "Manus": "AI", "AI工具": "ChatGPT",
     "流媒体": "Streaming", "TikTok": "TikTok", "美国金融": "PayPal", "Wise": "Bypass",
     "Blued": "Rainbow", "LGBT应用": "Rainbow_1", "LINE": "Line", "X": "X",
     "微信": "WeChat", "小红书": "Domestic", "抖音": "TikTok_1",

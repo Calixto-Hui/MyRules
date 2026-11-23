@@ -1,0 +1,7 @@
+# 上游里和 WhatsApp 无关或会抢走 Muse 登录的条目
+DOMAIN,graph.facebook.com
+DOMAIN-SUFFIX,bintray.com
+# 上游里的大段 AWS 公共 IP，会把大量无关服务（包括美国银行等）抢到 WhatsApp 分组
+IP-CIDR,18.194.0.0/15,no-resolve
+IP-CIDR,34.224.0.0/12,no-resolve
+IP-CIDR,54.242.0.0/15,no-resolve

@@ -18,6 +18,8 @@ VPSDANCE = "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules
 # 输出文件 -> (标题, 上游列表)。上游为空表示只用 custom/ 里手动维护的内容。
 # EXCLUDE：生成某个文件时，去掉已经出现在其他文件里的规则（避免重复）。
 RULES = {
+    "whatsapp": ("WhatsApp（含 App 进程，放在 Muse 前面，保证整个 App 走同一个出口）",
+                 [f"{BM}/Whatsapp/Whatsapp_No_Resolve.yaml"]),
     "muse": ("Muse (Meta AI)", [f"{VPSDANCE}/meta-ai.yaml"]),
     "manus": ("Manus AI 智能体", [
         f"{VPSDANCE}/manus.yaml",

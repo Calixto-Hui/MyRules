@@ -1,0 +1,7 @@
+# WhatsApp 补充：按 App 进程抓整个 App（含它连的 facebook/fbcdn 等 Meta 域名）
+DOMAIN-SUFFIX,wa.me
+# Mac 版进程名
+PROCESS-NAME,WhatsApp
+# 安卓：WhatsApp、WhatsApp Business
+PROCESS-NAME,com.whatsapp
+PROCESS-NAME,com.whatsapp.w4b
