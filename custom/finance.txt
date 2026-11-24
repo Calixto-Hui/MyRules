@@ -30,6 +30,8 @@ DOMAIN-SUFFIX,marcus.com
 DOMAIN-SUFFIX,sofi.com
 # SoFi App 的 Glassbox 行为分析上报，跟 App 走同一个节点
 DOMAIN-SUFFIX,sofi.glassboxdigital.io
+# SoFi App 专用的 Firebase 实时数据库（否则会被谷歌规则抓走）
+DOMAIN-SUFFIX,sofi-mobile-e2f2a.firebaseio.com
 DOMAIN-SUFFIX,chime.com
 DOMAIN-SUFFIX,nu.com
 DOMAIN-SUFFIX,nubank.com
