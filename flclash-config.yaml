@@ -95,7 +95,7 @@ auto-test: &auto
   type: url-test
   use: [TAG-GLOBAL, EdNovas]  # 删掉机场时这里也要同步删
   url: https://www.gstatic.com/generate_204
-  interval: 300
+  interval: 600   # 自动测速间隔（秒），调长更省电
   tolerance: 50
 
 # ---------- 策略组 ----------

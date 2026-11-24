@@ -129,6 +129,16 @@ def existing_rules(name):
     return set(parse_clash_yaml(open(path, encoding="utf-8").read()))
 
 
+IP_TYPES = ("IP-CIDR,", "IP-CIDR6,", "IP-ASN,", "IP-SUFFIX,")
+
+
+def no_resolve(rule):
+    """IP 类规则统一加 no-resolve：域名请求经过时不再为匹配它而做 DNS 解析（省电、更快）。"""
+    if rule.startswith(IP_TYPES) and not rule.endswith(",no-resolve"):
+        return rule + ",no-resolve"
+    return rule
+
+
 def build(name, title, upstreams):
     rules = []
     for url in upstreams:
@@ -138,6 +148,8 @@ def build(name, title, upstreams):
     for other in EXCLUDE.get(name, []):
         excluded |= existing_rules(other)
     excluded |= set(read_custom(f"{name}.exclude"))  # custom/<name>.exclude.txt 里手动剔除的
+    rules = [no_resolve(r) for r in rules]
+    excluded = {no_resolve(r) for r in excluded}
     rules = [r for r in rules if r not in excluded]
     seen, uniq = set(), []
     for r in rules:
