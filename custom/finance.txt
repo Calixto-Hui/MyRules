@@ -81,3 +81,22 @@ PROCESS-NAME,com.ebates
 # Anytime Mailbox 美国虚拟地址（iOS 走域名，安卓走包名）
 DOMAIN-SUFFIX,anytimemailbox.com
 PROCESS-NAME,com.anytimemailbox.renter
+
+# 关键词规则：抓住 App 用到的第三方服务子域名（如 xxx.glassboxdigital.io、xxx-mobile.firebaseio.com、xxx.zendesk.com）
+# 只用不会误伤的独特品牌名；chase/citi/discover/ally 等太常见的词不用（会误伤 purchase、cities、discovery 等）
+# sofi 用 "sofi." 和 "sofi-"，避免把雅高的 sofitel 抢过来
+DOMAIN-KEYWORD,sofi.
+DOMAIN-KEYWORD,sofi-
+DOMAIN-KEYWORD,kikoff
+DOMAIN-KEYWORD,wellsfargo
+DOMAIN-KEYWORD,bankofamerica
+DOMAIN-KEYWORD,capitalone
+DOMAIN-KEYWORD,americanexpress
+DOMAIN-KEYWORD,creditkarma
+DOMAIN-KEYWORD,transunion
+DOMAIN-KEYWORD,experian
+DOMAIN-KEYWORD,equifax
+DOMAIN-KEYWORD,chexsystems
+DOMAIN-KEYWORD,zellepay
+DOMAIN-KEYWORD,nubank
+DOMAIN-KEYWORD,anytimemailbox
