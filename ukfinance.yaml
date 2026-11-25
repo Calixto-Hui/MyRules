@@ -1,23 +1,10 @@
-# NAME: 英国（Marriott Bonvoy 借记卡 / Currensea、雅高 Accor 等）
+# NAME: 英国金融（Marriott Bonvoy 借记卡 / Currensea、Aiia 开放银行等）
 # CUSTOM: custom/ukfinance.txt
-# TOTAL: 19
+# TOTAL: 6
 payload:
   - DOMAIN-SUFFIX,currensea.com
   - DOMAIN-SUFFIX,currensea.co.uk
   - PROCESS-NAME,com.marriottdebitcard.app
-  - DOMAIN-SUFFIX,accor.com
-  - DOMAIN-SUFFIX,accorhotels.com
-  - DOMAIN-SUFFIX,accorplus.com
-  - DOMAIN-SUFFIX,sofitel.com
-  - DOMAIN-SUFFIX,novotel.com
-  - DOMAIN-SUFFIX,ibis.com
-  - DOMAIN-SUFFIX,mercure.com
-  - DOMAIN-SUFFIX,pullmanhotels.com
-  - DOMAIN-SUFFIX,fairmont.com
-  - DOMAIN-SUFFIX,raffles.com
-  - DOMAIN-SUFFIX,swissotel.com
-  - DOMAIN-SUFFIX,mamashelter.com
-  - PROCESS-NAME,com.accor.appli.hybrid
   - DOMAIN-SUFFIX,aiia.eu
   - DOMAIN-SUFFIX,nordicapigateway.com
   - DOMAIN-SUFFIX,openbankingeu.mastercard.com
