@@ -28,10 +28,15 @@ DROP_TOP = {
 DROP_GROUPS = {"AdsPower"}
 
 ICON = "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/{}.png"
+# Qure 里没有的图标，用其他图标库
+ICON_URLS = {
+    "Claude": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude.png",
+}
 ICONS = {
+    "ChatGPT": "ChatGPT", "AI工具": "AI",
     "节点选择": "Proxy", "自动选择": "Auto", "全部节点": "Global",
     "TAG-GLOBAL": "Airport", "EdNovas": "Airport",
-    "WhatsApp": "Facebook", "Muse": "AI", "Manus": "AI", "AI工具": "ChatGPT",
+    "WhatsApp": "Facebook", "Muse": "AI", "Manus": "AI", 
     "流媒体": "Streaming", "TikTok": "TikTok", "美国金融": "PayPal", "Wise": "Bypass",
     "Blued": "Rainbow", "LGBT应用": "Rainbow_1", "LINE": "Line", "X": "X",
     "微信": "WeChat", "小红书": "Domestic", "抖音": "TikTok_1",
@@ -86,7 +91,9 @@ def convert(cfg):
         if g.get("type") == "url-test":
             g.pop("url", None)
             g["lazy"] = True
-        if g["name"] in ICONS:
+        if g["name"] in ICON_URLS:
+            g["icon"] = ICON_URLS[g["name"]]
+        elif g["name"] in ICONS:
             g["icon"] = ICON.format(ICONS[g["name"]])
         groups.append(g)
     out["proxy-groups"] = groups

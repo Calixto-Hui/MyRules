@@ -8,7 +8,10 @@
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
-| ai.yaml | AI 工具：ChatGPT、Claude、Gemini、Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 296 | VPSDance/ai-proxy-rules |
+| claude.yaml | Claude（Anthropic） | 43 | VPSDance + v2fly |
+| chatgpt.yaml | ChatGPT / OpenAI | 39 | VPSDance + v2fly |
+| gemini.yaml | Gemini / Google AI（走谷歌服务分组） | 55 | VPSDance + v2fly |
+| ai.yaml | 其他 AI 工具：Grok、Perplexity、Copilot、Cursor、Midjourney 等 100 多个（不含 Muse、Manus） | 171 | VPSDance/ai-proxy-rules |
 | ukfinance.yaml | 英国：Marriott Bonvoy 借记卡（Currensea）、雅高 Accor 官网/ALL App/旗下品牌、Aiia 开放银行 | 19 | 自行整理 |
 | x.yaml | X（原 Twitter），含安卓 App 进程（Grok 归 AI工具） | 33 | blackmatrix7/ios_rule_script |
 | wise.yaml | Wise 国际汇款（原 TransferWise） | 2 | v2fly/domain-list-community |
@@ -71,7 +74,7 @@ rules:
 
 ## 建议的规则顺序
 
-whatsapp → muse → manus → finance → ukfinance → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
+whatsapp → muse → manus → finance → ukfinance → claude → chatgpt → gemini → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

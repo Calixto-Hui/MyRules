@@ -25,6 +25,12 @@ RULES = {
         f"{VPSDANCE}/manus.yaml",
         f"{V2FLY}/manus",
     ]),
+    "claude": ("Claude（Anthropic，含 Mac 版 Claude 和 Claude Code 进程）",
+               [f"{VPSDANCE}/anthropic.yaml", f"{V2FLY}/anthropic"]),
+    "chatgpt": ("ChatGPT / OpenAI（含 Sora、Codex）",
+                [f"{VPSDANCE}/openai.yaml", f"{V2FLY}/openai"]),
+    "gemini": ("Gemini / Google AI（AI Studio、NotebookLM 等，走「谷歌服务」分组）",
+               [f"{VPSDANCE}/google-ai.yaml", f"{V2FLY}/google-deepmind"]),
     "ai": ("AI 工具（ChatGPT / Claude / Gemini / Grok / Perplexity / Copilot 等，不含 Muse、Manus）",
            [f"{VPSDANCE}/global.yaml"]),
     "wise": ("Wise 国际汇款（原 TransferWise）", [f"{V2FLY}/wise"]),
@@ -68,7 +74,9 @@ RULES = {
     ]),
 }
 
-EXCLUDE = {"ai": ["muse", "manus"], "x": ["ai"]}
+EXCLUDE = {"ai": ["muse", "manus", "claude", "chatgpt", "gemini"], "x": ["ai", "claude", "chatgpt", "gemini"]}
+# 共用的剔除清单：上游把通用第三方服务（sentry、stripe 等）也算进各家 AI，这里统一剔除
+EXCLUDE_FILES = {"claude": ["ai.exclude"], "chatgpt": ["ai.exclude"], "gemini": ["ai.exclude"]}
 
 RULE_TYPES = ("DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "DOMAIN-REGEX", "IP-CIDR",
               "IP-CIDR6", "IP-ASN", "PROCESS-NAME", "PROCESS-PATH", "GEOIP", "GEOSITE")
@@ -147,7 +155,9 @@ def build(name, title, upstreams):
     excluded = set()
     for other in EXCLUDE.get(name, []):
         excluded |= existing_rules(other)
-    excluded |= set(read_custom(f"{name}.exclude"))  # custom/<name>.exclude.txt 里手动剔除的
+    excluded |= set(read_custom(f"{name}.exclude"))
+    for extra in EXCLUDE_FILES.get(name, []):
+        excluded |= set(read_custom(extra))  # custom/<name>.exclude.txt 里手动剔除的
     rules = [no_resolve(r) for r in rules]
     excluded = {no_resolve(r) for r in excluded}
     rules = [r for r in rules if r not in excluded]

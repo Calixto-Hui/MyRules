@@ -133,7 +133,15 @@ proxy-groups:
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
-  - name: AI工具
+  - name: Claude   # Anthropic 不支持香港、中国大陆节点
+    type: select
+    proxies: [美国节点, 英国节点, 日本节点, 新加坡节点, 韩国节点, 台湾节点, 德国节点, 节点选择, 全部节点, DIRECT]
+
+  - name: ChatGPT   # OpenAI 不支持香港、中国大陆节点
+    type: select
+    proxies: [美国节点, 英国节点, 日本节点, 新加坡节点, 韩国节点, 台湾节点, 德国节点, 节点选择, 全部节点, DIRECT]
+
+  - name: AI工具   # 其他 AI 服务（Perplexity、Grok、Copilot 等）
     type: select
     proxies: [美国节点, 节点选择, 香港节点, 台湾节点, 日本节点, 新加坡节点, 韩国节点, 英国节点, 德国节点, 中国大陆节点, 全部节点, DIRECT]
 
@@ -249,6 +257,27 @@ rule-providers:
     format: yaml
     url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/whatsapp.yaml"
     path: ./ruleset/whatsapp.yaml
+    interval: 86400
+  claude:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/claude.yaml"
+    path: ./ruleset/claude.yaml
+    interval: 86400
+  chatgpt:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/chatgpt.yaml"
+    path: ./ruleset/chatgpt.yaml
+    interval: 86400
+  gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Calixto-Hui/MyRules/main/gemini.yaml"
+    path: ./ruleset/gemini.yaml
     interval: 86400
   muse:
     type: http
@@ -393,7 +422,10 @@ rules:
   - RULE-SET,manus,Manus
   - RULE-SET,finance,美国金融
   - RULE-SET,ukfinance,英国金融
-  - RULE-SET,ai,AI工具  # ChatGPT、Claude、Gemini 等，排在 google 前面
+  - RULE-SET,claude,Claude
+  - RULE-SET,chatgpt,ChatGPT
+  - RULE-SET,gemini,谷歌服务  # Gemini 跟谷歌服务走同一个出口
+  - RULE-SET,ai,AI工具  # 其他 AI 服务，排在 google 前面
   - RULE-SET,x,X  # 排在 AI 后面，Grok 归 AI工具
   - RULE-SET,wise,Wise
   - RULE-SET,blued,Blued
