@@ -30,6 +30,7 @@ DROP_GROUPS = {"AdsPower"}
 ICON = "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/{}.png"
 # Qure 里没有的图标，用其他图标库
 ICON_URLS = {
+    "美国购物": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/shop.png",
     "Claude": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude.png",
 }
 ICONS = {

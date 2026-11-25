@@ -59,6 +59,7 @@ RULES = {
     ]),
     "chinamedia": ("国内流媒体（爱奇艺 / 优酷 / 腾讯视频 / 芒果TV / B站 / 央视 / QQ音乐 / 网易云音乐等）",
                    [f"{BM}/ChinaMedia/ChinaMedia_No_Resolve.yaml"]),
+    "usshop": ("美国购物（Target、Best Buy、Walmart、Costco、Home Depot 等风控严的零售商）", []),
     "ukfinance": ("英国金融（Marriott Bonvoy 借记卡 / Currensea、Aiia 开放银行等）", []),
     "cscec": ("中建集团", []),
     "x": ("X（原 Twitter）", [f"{BM}/Twitter/Twitter_No_Resolve.yaml"]),

@@ -8,6 +8,7 @@
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
+| usshop.yaml | 美国购物：Target、Best Buy、Walmart、Costco、Home Depot、Lowe's、Macy's、Nordstrom、CVS 等 | 63 | 自行整理 |
 | claude.yaml | Claude（Anthropic） | 43 | VPSDance + v2fly |
 | chatgpt.yaml | ChatGPT / OpenAI | 39 | VPSDance + v2fly |
 | gemini.yaml | Gemini / Google AI（走谷歌服务分组） | 55 | VPSDance + v2fly |
@@ -74,7 +75,7 @@ rules:
 
 ## 建议的规则顺序
 
-whatsapp → muse → manus → finance → ukfinance → claude → chatgpt → gemini → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
+whatsapp → muse → manus → finance → ukfinance → usshop → claude → chatgpt → gemini → ai → x → wise → blued → lgbt → wechat → xiaohongshu → douyin → chinamedia → cscec → line → tiktok → streaming → google → apple
 
 YouTube 已经并入 google.yaml，跟谷歌服务走同一个节点。
 

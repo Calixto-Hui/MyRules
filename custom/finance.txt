@@ -101,12 +101,3 @@ DOMAIN-KEYWORD,zellepay
 DOMAIN-KEYWORD,nubank
 DOMAIN-KEYWORD,anytimemailbox
 
-# Target 美国购物（官网、图片 CDN、Target Circle 会员；安卓 App 按包名）
-DOMAIN-SUFFIX,target.com
-DOMAIN-SUFFIX,targetimg1.com
-DOMAIN-SUFFIX,targetimg2.com
-DOMAIN-SUFFIX,targetimg3.com
-DOMAIN-SUFFIX,targetcircle.com
-DOMAIN-SUFFIX,targetredcard.com
-DOMAIN,target.scene7.com
-PROCESS-NAME,com.target.ui

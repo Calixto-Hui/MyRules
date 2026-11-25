@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 355
+# TOTAL: 347
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -352,11 +352,3 @@ payload:
   - DOMAIN-KEYWORD,zellepay
   - DOMAIN-KEYWORD,nubank
   - DOMAIN-KEYWORD,anytimemailbox
-  - DOMAIN-SUFFIX,target.com
-  - DOMAIN-SUFFIX,targetimg1.com
-  - DOMAIN-SUFFIX,targetimg2.com
-  - DOMAIN-SUFFIX,targetimg3.com
-  - DOMAIN-SUFFIX,targetcircle.com
-  - DOMAIN-SUFFIX,targetredcard.com
-  - DOMAIN,target.scene7.com
-  - PROCESS-NAME,com.target.ui

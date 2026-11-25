@@ -1,0 +1,83 @@
+# 美国购物网站（风控严、常屏蔽非美国 IP 的大型零售商）
+# 每家：官网 + 图片/静态资源 CDN + 品牌关键词（抓 App 用的第三方子域名）+ 安卓包名
+
+# Target
+DOMAIN-SUFFIX,target.com
+DOMAIN-SUFFIX,targetimg1.com
+DOMAIN-SUFFIX,targetimg2.com
+DOMAIN-SUFFIX,targetimg3.com
+DOMAIN-SUFFIX,targetcircle.com
+DOMAIN-SUFFIX,targetredcard.com
+DOMAIN,target.scene7.com
+PROCESS-NAME,com.target.ui
+
+# Best Buy
+DOMAIN-SUFFIX,bestbuy.com
+DOMAIN-SUFFIX,bbystatic.com
+DOMAIN-KEYWORD,bestbuy
+PROCESS-NAME,com.bestbuy.android
+
+# Walmart / Sam's Club
+DOMAIN-SUFFIX,walmart.com
+DOMAIN-SUFFIX,walmartimages.com
+DOMAIN-SUFFIX,wal.co
+DOMAIN-SUFFIX,samsclub.com
+DOMAIN-KEYWORD,walmart
+DOMAIN-KEYWORD,samsclub
+PROCESS-NAME,com.walmart.android
+PROCESS-NAME,com.rfi.sams.android
+
+# Costco
+DOMAIN-SUFFIX,costco.com
+DOMAIN-SUFFIX,costco-static.com
+DOMAIN-SUFFIX,costcobusinessdelivery.com
+PROCESS-NAME,com.costco.app.android
+
+# Home Depot / Lowe's
+DOMAIN-SUFFIX,homedepot.com
+DOMAIN-SUFFIX,homedepot-static.com
+DOMAIN-SUFFIX,thdstatic.com
+DOMAIN-KEYWORD,homedepot
+DOMAIN-SUFFIX,lowes.com
+DOMAIN-SUFFIX,lowescdn.com
+PROCESS-NAME,com.thehomedepot
+PROCESS-NAME,com.lowes.android
+
+# 百货：Macy's / Kohl's / Nordstrom
+DOMAIN-SUFFIX,macys.com
+DOMAIN-SUFFIX,macysassets.com
+DOMAIN-SUFFIX,kohls.com
+DOMAIN-SUFFIX,kohlsimg.com
+DOMAIN-SUFFIX,nordstrom.com
+DOMAIN-SUFFIX,nordstromrack.com
+DOMAIN-SUFFIX,nordstromimage.com
+PROCESS-NAME,com.macys.android
+PROCESS-NAME,com.kohls.mcommerce.opal
+PROCESS-NAME,com.nordstrom.app
+
+# 药妆：CVS / Walgreens / Ulta
+DOMAIN-SUFFIX,cvs.com
+DOMAIN-SUFFIX,walgreens.com
+DOMAIN-SUFFIX,ulta.com
+PROCESS-NAME,com.cvs.launchers.cvs
+PROCESS-NAME,com.usablenet.mobile.walgreen
+PROCESS-NAME,com.ulta
+
+# 电子 / 数码：Newegg / B&H / GameStop
+DOMAIN-SUFFIX,newegg.com
+DOMAIN-SUFFIX,neweggimages.com
+DOMAIN-SUFFIX,bhphotovideo.com
+DOMAIN-SUFFIX,bhphoto.com
+DOMAIN-SUFFIX,gamestop.com
+PROCESS-NAME,com.newegg.app
+
+# 其他：Wayfair / Chewy / Dick's / Staples / Instacart
+DOMAIN-SUFFIX,wayfair.com
+DOMAIN-SUFFIX,wfcdn.com
+DOMAIN-SUFFIX,chewy.com
+DOMAIN-SUFFIX,dickssportinggoods.com
+DOMAIN-SUFFIX,staples.com
+DOMAIN-SUFFIX,instacart.com
+PROCESS-NAME,com.wayfair.wayfair
+PROCESS-NAME,com.chewy.android
+PROCESS-NAME,com.instacart.client
