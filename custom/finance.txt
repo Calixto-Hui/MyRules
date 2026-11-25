@@ -37,10 +37,6 @@ DOMAIN-SUFFIX,nu.com
 DOMAIN-SUFFIX,nubank.com
 DOMAIN-SUFFIX,nubank.com.br
 
-# 返利网站
-DOMAIN-SUFFIX,rakuten.com
-DOMAIN-SUFFIX,ebates.com
-
 # 征信机构与信用分查询
 DOMAIN-SUFFIX,experian.com
 DOMAIN-SUFFIX,equifax.com
@@ -76,7 +72,6 @@ PROCESS-NAME,com.equifax.myequifax
 PROCESS-NAME,com.transunion.TransUnion
 PROCESS-NAME,com.myfico
 PROCESS-NAME,com.creditkarma.mobile
-PROCESS-NAME,com.ebates
 
 # Anytime Mailbox 美国虚拟地址（iOS 走域名，安卓走包名）
 DOMAIN-SUFFIX,anytimemailbox.com

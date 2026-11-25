@@ -1,6 +1,6 @@
 # NAME: 美国购物（Target、Best Buy、Walmart、Costco、Home Depot 等风控严的零售商）
 # CUSTOM: custom/usshop.txt
-# TOTAL: 63
+# TOTAL: 90
 payload:
   - DOMAIN-SUFFIX,target.com
   - DOMAIN-SUFFIX,targetimg1.com
@@ -65,3 +65,30 @@ payload:
   - PROCESS-NAME,com.wayfair.wayfair
   - PROCESS-NAME,com.chewy.android
   - PROCESS-NAME,com.instacart.client
+  - DOMAIN-SUFFIX,cardcash.com
+  - DOMAIN-SUFFIX,raise.com
+  - DOMAIN-SUFFIX,giftcardgranny.com
+  - DOMAIN-SUFFIX,giftcardmall.com
+  - DOMAIN-SUFFIX,giftcards.com
+  - DOMAIN-SUFFIX,arbitragecard.com
+  - DOMAIN-KEYWORD,cardcash
+  - DOMAIN-SUFFIX,rakuten.com
+  - DOMAIN-SUFFIX,ebates.com
+  - DOMAIN-SUFFIX,topcashback.com
+  - DOMAIN-SUFFIX,befrugal.com
+  - DOMAIN-SUFFIX,mrrebates.com
+  - DOMAIN-SUFFIX,swagbucks.com
+  - DOMAIN-SUFFIX,ibotta.com
+  - DOMAIN-SUFFIX,fetchrewards.com
+  - DOMAIN-SUFFIX,fetch.com
+  - DOMAIN-SUFFIX,shopkick.com
+  - DOMAIN-SUFFIX,joinhoney.com
+  - DOMAIN-SUFFIX,retailmenot.com
+  - DOMAIN-SUFFIX,upromise.com
+  - DOMAIN-SUFFIX,slickdeals.net
+  - DOMAIN-KEYWORD,topcashback
+  - DOMAIN-KEYWORD,swagbucks
+  - PROCESS-NAME,com.ebates
+  - PROCESS-NAME,com.ibotta.android
+  - PROCESS-NAME,com.fetchrewards.fetchrewards.hop
+  - PROCESS-NAME,com.prodege.swagbucksmobile

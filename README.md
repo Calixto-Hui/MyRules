@@ -8,7 +8,7 @@
 |---|---|---|---|
 | muse.yaml | Muse（Meta AI，含 Facebook / Instagram 登录） | 29 | VPSDance/ai-proxy-rules、juner922/muse-loon-rules、v2fly |
 | manus.yaml | Manus AI 智能体（含 manus.space 部署站点、安卓 App 进程） | 6 | VPSDance/ai-proxy-rules、v2fly、自行补充 |
-| usshop.yaml | 美国购物：Target、Best Buy、Walmart、Costco、Home Depot、Lowe's、Macy's、Nordstrom、CVS 等 | 63 | 自行整理 |
+| usshop.yaml | 美国购物：Target、Best Buy、Walmart、Costco 等零售商，CardCash 等礼品卡平台，Rakuten、TopCashback 等返现网站 | 90 | 自行整理 |
 | claude.yaml | Claude（Anthropic） | 43 | VPSDance + v2fly |
 | chatgpt.yaml | ChatGPT / OpenAI | 39 | VPSDance + v2fly |
 | gemini.yaml | Gemini / Google AI（走谷歌服务分组） | 55 | VPSDance + v2fly |
