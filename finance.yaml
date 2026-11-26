@@ -3,7 +3,7 @@
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe
 # SOURCE: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/squareup
 # CUSTOM: custom/finance.txt
-# TOTAL: 344
+# TOTAL: 350
 payload:
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
@@ -349,3 +349,9 @@ payload:
   - DOMAIN-KEYWORD,zellepay
   - DOMAIN-KEYWORD,nubank
   - DOMAIN-KEYWORD,anytimemailbox
+  - DOMAIN-SUFFIX,kraken.com
+  - DOMAIN-SUFFIX,krakenfutures.com
+  - DOMAIN-SUFFIX,krak.app
+  - DOMAIN-KEYWORD,kraken
+  - PROCESS-NAME,com.kraken.invest.app
+  - PROCESS-NAME,com.kraken.trade

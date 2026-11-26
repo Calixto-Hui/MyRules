@@ -96,3 +96,11 @@ DOMAIN-KEYWORD,zellepay
 DOMAIN-KEYWORD,nubank
 DOMAIN-KEYWORD,anytimemailbox
 
+
+# Kraken（交易所）和 Krak（Kraken 旗下的转账/储蓄 App）
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,krakenfutures.com
+DOMAIN-SUFFIX,krak.app
+DOMAIN-KEYWORD,kraken
+PROCESS-NAME,com.kraken.invest.app
+PROCESS-NAME,com.kraken.trade
