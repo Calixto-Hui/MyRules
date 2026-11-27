@@ -112,3 +112,10 @@ PROCESS-NAME,com.ebates
 PROCESS-NAME,com.ibotta.android
 PROCESS-NAME,com.fetchrewards.fetchrewards.hop
 PROCESS-NAME,com.prodege.swagbucksmobile
+
+# 亚马逊美国站（只抓美国站的网页主域名；amazon.sa、amazon.ae、amazon.co.uk 等其他站点不受影响）
+# 不用 DOMAIN-SUFFIX,amazon.com：它会把 AWS 控制台、Kindle、Alexa、Prime Video 等所有 *.amazon.com 服务一起带走
+DOMAIN,amazon.com
+DOMAIN,www.amazon.com
+DOMAIN,smile.amazon.com
+DOMAIN,fls-na.amazon.com

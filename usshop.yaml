@@ -1,6 +1,6 @@
 # NAME: 美国购物（Target、Best Buy、Walmart、Costco、Home Depot 等风控严的零售商）
 # CUSTOM: custom/usshop.txt
-# TOTAL: 90
+# TOTAL: 94
 payload:
   - DOMAIN-SUFFIX,target.com
   - DOMAIN-SUFFIX,targetimg1.com
@@ -92,3 +92,7 @@ payload:
   - PROCESS-NAME,com.ibotta.android
   - PROCESS-NAME,com.fetchrewards.fetchrewards.hop
   - PROCESS-NAME,com.prodege.swagbucksmobile
+  - DOMAIN,amazon.com
+  - DOMAIN,www.amazon.com
+  - DOMAIN,smile.amazon.com
+  - DOMAIN,fls-na.amazon.com
